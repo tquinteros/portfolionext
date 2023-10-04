@@ -14,7 +14,6 @@
     "react": "latest",
     "react-dom": "latest",
     "react-parallax-tilt": "^1.7.168",
-    "react-particles": "^2.12.2",
     "react-tsparticles": "^2.12.2"
   },
   "devDependencies": {
