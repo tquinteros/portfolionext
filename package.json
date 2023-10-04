@@ -13,6 +13,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-icons": "^4.11.0",
     "react-parallax-tilt": "^1.7.168",
     "react-tsparticles": "^2.12.2"
   },

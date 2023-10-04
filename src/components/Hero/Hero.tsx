@@ -26,7 +26,7 @@ const Hero = () => {
                     options={optionsParticles}
                 />
             </div>
-            <div className=' grid grid-cols-12 container mx-auto'>
+            <div className='grid grid-cols-12 container mx-auto'>
                 <div className='flex flex-col gap-6 justify-center  w-full h-full col-span-12 md:col-span-6'>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ const Hero = () => {
                     </motion.div>
                 </div>
                 <div className='col-span-12 flex justify-center md:col-span-6'>
-                    <Image src="/hero1.png" className='z-50 relative' width={650} height={650} alt="Hero" />
+                    <Image src="/hero1.png" className='z-40 relative' width={650} height={650} alt="Hero" />
                 </div>
             </div>
         </div>
