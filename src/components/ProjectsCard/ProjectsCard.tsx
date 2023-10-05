@@ -10,7 +10,7 @@ import TechBadge from "../TechBadge/TechBadge";
 
 export const ProjectsCard = ({ title, description, image, index, techs }: ProjectsCardProps) => {
     return (
-        <Tilt perspective={500} className="md:col-span-4 col-span-12 w-full bg-[#151030] parallax-effect green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+        <Tilt perspective={500} className="md:col-span-4 min-h-[300px] col-span-12 w-full bg-[#151030] border-red-500 border p-[1px] rounded-[20px] shadow-card">
             <motion.div
                 className=""
                 initial={{ y: 100, opacity: 0 }}

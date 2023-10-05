@@ -18,7 +18,7 @@ export const optionsParticles = {
           quantity: 5,
         },
         repulse: {
-          distance: 150,
+          distance: 125,
           duration: 0.3,
         },
         bubble: {

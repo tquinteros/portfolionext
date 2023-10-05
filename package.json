@@ -15,12 +15,16 @@
     "react-dom": "latest",
     "react-icons": "^4.11.0",
     "react-parallax-tilt": "^1.7.168",
-    "react-tsparticles": "^2.12.2"
+    "react-responsive-carousel": "^3.2.23",
+    "react-slick": "^0.29.0",
+    "react-tsparticles": "^2.12.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/react-slick": "^0.23.10",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",

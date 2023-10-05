@@ -11,7 +11,7 @@ export const Projects = () => {
                     <span className="block w-20 h-0.5 my-4 violet-gradient "></span>
                 </div>
             </div>
-            <div className="grid grid-cols-12 p-4 md:p-0 gap-8 md:gap-12">
+            <div className="grid grid-cols-12 md:p-0 gap-8 md:gap-12">
                 {
                     projects.map((project, index) => (
                         <ProjectsCard key={project.title} title={project.title} description={project.description} index={index} techs={project.techs} image={project.image} />

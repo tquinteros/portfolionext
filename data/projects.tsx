@@ -3,7 +3,7 @@ export const projects = [
         title: "RAWR Connect",
         description: "This is a project",
         image: "/rawr.png",
-        techs: ["NextJS", "Material UI"]
+        techs: ["NextJs", "Material UI", "Styled Components"]
     },
     {
         title: "Divisa Converter",
@@ -15,18 +15,18 @@ export const projects = [
         title: "UndefinedBA",
         description: "This is a project",
         image: "/undefined.png",
-        techs: ["Tiendanube", "Javascript"]
+        techs: ["TiendaNube", "Javascript", "CSS"]
     },
     {
         title: "Project2",
         description: "This is a project",
-        image: "/conversordivisas.png",
+        image: "/rawr.png",
         techs: ["tech1", "tech2"]
     },
     {
         title: "Project2",
         description: "This is a project",
-        image: "/conversordivisas.png",
+        image: "/rawr.png",
         techs: ["tech1", "tech2"]
     },
 ]
