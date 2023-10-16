@@ -4,7 +4,7 @@ import { navLinks } from '@/data/navLinks'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState, useEffect, useRef  } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { AiOutlineMenu, AiOutlineClose, AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai'
 
 export const Header = () => {
@@ -28,7 +28,7 @@ export const Header = () => {
             document.removeEventListener('click', closeMenuOnOutsideClick);
         };
     }, [isMenuOpen]);
-    
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY === 0) {
@@ -48,18 +48,23 @@ export const Header = () => {
             className={`py-2 sticky top-0 z-[999] ${isTop ? 'bg-transparent' : 'bg-[#050816]'} duration-300`}
         >
             <nav className='flex justify-between px-4 md:px-0 container mx-auto items-center'>
-                <Link href="/" className="flex items-center gap-2 cursor-pointer  hover:opacity-75 duration-300" onClick={() => {
-                    window.scrollTo(0, 0)
-                }}>
-                    <Image src='/logo.png' className='object-contain' width={75} height={75} alt="Logo" />
-                    <p className="text-white text-[18px] font-bold">Tomás Quinteros <span className="md:block hidden">Frontend Developer</span></p>
-                </Link>
+                <motion.div initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1.2 }}
+                >
+                    <Link href="/" className="flex items-center gap-2 cursor-pointer  hover:opacity-75 duration-300" onClick={() => {
+                        window.scrollTo(0, 0)
+                    }}>
+                        <Image src='/logo.png' className='object-contain' width={75} height={75} alt="Logo" />
+                        <p className="text-white text-[18px] font-bold hidden sm:block">Tomás Quinteros <span className="md:block hidden">Frontend Developer</span></p>
+                    </Link>
+                </motion.div>
                 {
                     isMenuOpen ? <AiOutlineClose size={48} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} /> : <AiOutlineMenu size={48} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} />
                 }
                 {
                     isMenuOpen && (
-                        <motion.ul ref={menuRef} className='flex px-4 border pt-6 rounded-lg absolute top-24 pb-4 -mt-2 z-50 w-[360px] right-4 bg-[#050816] flex-col gap-12 md:hidden' initial={{ x: 500 }} animate={{ x: 0 }} transition={{ duration: 0.5 }}>
+                        <motion.ul ref={menuRef} className='flex px-4 border pt-6 rounded-lg absolute top-24 pb-4 z-50 right-0 w-[85%] bg-[#050816] flex-col gap-12 md:hidden' initial={{ y: -150, opacity: 0.1 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
                             {navLinks.map((navLink, index) => (
                                 <li className='font-bold border-b-[4px] relative hover:opacity-75 duration-300 group' key={index}>
                                     <Link className='relative' href={navLink.href}>
@@ -79,7 +84,11 @@ export const Header = () => {
                         </motion.ul>
                     )
                 }
-                <ul className='md:gap-12 hidden md:flex md:items-center'>
+                <motion.ul
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1.2 }}
+                    className='md:gap-12 hidden md:flex md:items-center'>
                     {navLinks.map((navLink, index) => (
                         <li className='font-bold relative hover:opacity-75 duration-300 group' key={index}>
                             <Link className='relative' href={navLink.href}>
@@ -96,7 +105,7 @@ export const Header = () => {
                             <AiFillLinkedin size={40} className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300" />
                         </a>
                     </div>
-                </ul>
+                </motion.ul>
             </nav>
         </header >
     )

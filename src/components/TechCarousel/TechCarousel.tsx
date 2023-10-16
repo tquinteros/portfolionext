@@ -47,7 +47,7 @@ const TechCarousel: React.FC = () => {
         infinite: true,
         speed: 750,
         drag: true,
-        autoplaySpeed: 400,
+        autoplaySpeed: 750,
         slidesToShow: 5.5,
         slidesToScroll: 1,
         responsive: [
@@ -84,7 +84,7 @@ const TechCarousel: React.FC = () => {
                                     <div className="flex justify-center items-center rounded-full">
                                         <Image src={tech.icon} alt={tech.label} width={100} height={100} />
                                     </div>
-                                    <span className="text-xl font-bold text-center green-text-gradient">{tech.label}</span>
+                                    <span className="text-xl font-bold text-center">{tech.label}</span>
                                     <div className="flex justify-center">
                                         <span className="block w-8 h-1 mt-2 bg-custom-color12"></span>
                                     </div>
