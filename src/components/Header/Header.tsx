@@ -117,7 +117,11 @@ export const Header = () => {
                         <motion.ul ref={menuRef} className='flex px-4 border pt-6 rounded-lg absolute top-24 pb-4 z-50 right-0 w-[85%] bg-[#050816] flex-col gap-12 md:hidden' initial={{ y: -150, opacity: 0.1 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
                             {navLinks.map((navLink, index) => (
                                 <li className='font-bold border-b-[4px] relative hover:opacity-75 duration-300 group' key={index}>
-                                    <Link className='relative' href={navLink.href}>
+                                    <Link
+                                        className='relative'
+                                        href={navLink.href}
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
                                         {navLink.name}
                                         <span className='block w-full h-0.5 absolute top-6 left-0 transform scale-x-0 transition-transform group-hover:scale-x-100'></span>
                                     </Link>
