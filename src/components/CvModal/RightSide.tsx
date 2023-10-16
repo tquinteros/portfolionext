@@ -76,8 +76,8 @@ const RightSide = () => {
                     <div className="flex items-center gap-4">
                         <a href="https://www.zetaequis.com" target="_blank" className="text-xl font-bold hover:opacity-75 duration-300"><Image src="/zetaequis.jpeg" width={64} height={64} alt="Me" className="rounded-full" /></a>
                         <div className="flex flex-col gap-1">
-                            <h3 className="text-xl font-bold">Zetaequis</h3>
-                            <h3 className="text-md font-bold">2022 - Present &nbsp; | &nbsp; Frontend <span className="md:block hidden">Developer</span></h3>
+                            <a href="https://www.zetaequis.com" target="_blank" className="text-xl w-fit hover:opacity-75 duration-300 font-bold">Zetaequis</a>
+                            <h3 className="text-md font-bold">2022 - Present &nbsp; | &nbsp; Frontend <span className="md:inline hidden">Developer</span></h3>
                         </div>
                     </div>
                 </div>
