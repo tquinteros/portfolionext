@@ -9,3 +9,9 @@ export interface ProjectsCardProps {
 export interface TechBadgeProps {
     label: string;
 }
+
+export interface HomeModalProps {
+    isOpen: boolean;
+    children: React.ReactNode;
+    onClose: () => void;
+  }

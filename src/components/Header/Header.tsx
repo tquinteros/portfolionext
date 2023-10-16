@@ -6,16 +6,24 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState, useEffect, useRef } from 'react'
 import { AiOutlineMenu, AiOutlineClose, AiOutlineGithub, AiFillLinkedin, AiOutlineDownload } from 'react-icons/ai'
+import Modal from '../CvModal/CvModal'
+import ContentModal from '../CvModal/Content'
+import { ImProfile } from 'react-icons/im'
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isTop, setIsTop] = useState(true);
     const menuRef = useRef<HTMLUListElement | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const closeMenuOnOutsideClick = (e: MouseEvent) => {
         if (menuRef.current && e.target instanceof Node && !menuRef.current.contains(e.target)) {
             setIsMenuOpen(false);
         }
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
     };
 
     useEffect(() => {
@@ -54,6 +62,9 @@ export const Header = () => {
         <header
             className={`py-2 sticky top-0 z-[999] ${isTop ? 'bg-transparent' : 'bg-[#050816]'} duration-300`}
         >
+            <Modal isOpen={isModalOpen} onClose={closeModal}>
+                <ContentModal />
+            </Modal>
             <nav className='flex justify-between px-4 md:px-0 container mx-auto items-center'>
                 <motion.div initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -67,7 +78,25 @@ export const Header = () => {
                     </Link>
                 </motion.div>
                 {
-                    isMenuOpen ? <AiOutlineClose size={48} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} /> : <AiOutlineMenu size={48} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} />
+                    isMenuOpen ? (
+                        <motion.div
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ duration: 1.2 }}
+                        >
+                            <AiOutlineClose size={48} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} />
+                        </motion.div>
+                    )
+                        :
+                        (
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 1.2 }}
+                            >
+                                <AiOutlineMenu size={48} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} />
+                            </motion.div>
+                        )
                 }
                 {
                     isMenuOpen && (
@@ -112,19 +141,25 @@ export const Header = () => {
                         </li>
                     ))}
                     <div className='flex gap-4 items-center'>
+                        <button
+                            onClick={() => setIsModalOpen(true)}
+                            className='flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1'
+                        >
+                            <ImProfile size={40} />
+                        </button>
                         <a href='https://github.com/tquinteros' target='_blank' rel='noopener noreferrer'>
                             <AiOutlineGithub size={40} className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300" />
                         </a>
                         <a href='https://www.linkedin.com/in/tomas-quinteros1/' target='_blank' rel='noopener noreferrer'>
                             <AiFillLinkedin size={40} className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300" />
                         </a>
-                        <button
+                        {/* <button
                             onClick={handleDownload}
                             className='flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1'
                         >
                             <AiOutlineDownload size={40} />
                             CV
-                        </button>
+                        </button> */}
                     </div>
                 </motion.ul>
             </nav>

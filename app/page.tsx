@@ -14,13 +14,13 @@ export default function Home() {
       <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
         <Hero />
       </div>
+      <TechCarousel />
       <div className='container mx-auto'>
         <Projects />
       </div>
-      <TechCarousel />
-      <div className='container mx-auto'>
+      {/* <div className='container mx-auto'>
         <Tabs />
-      </div>
+      </div> */}
       {/* <CvButton /> */}
     </main>
   )
