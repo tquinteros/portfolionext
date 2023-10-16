@@ -4,7 +4,7 @@ export const optionsParticles = {
       events: {
         onClick: {
           enable: true,
-          mode: ["push", "bubble"],
+          mode: ["push"],
         },
         onHover: {
           enable: true,
@@ -21,12 +21,12 @@ export const optionsParticles = {
           distance: 125,
           duration: 0.3,
         },
-        bubble: {
-          distance: 200,
-          size: 20,
-          duration: 2,
-          opacity: 0.5,
-        },
+        // bubble: {
+        //   distance: 200,
+        //   size: 20,
+        //   duration: 2,
+        //   opacity: 0.5,
+        // },
         // slow: {
         //   factor: 3,
         //   radius: 200,
