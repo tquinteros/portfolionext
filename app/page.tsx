@@ -4,6 +4,8 @@ import Header from '@/src/components/Header/Header'
 import Hero from '@/src/components/Hero/Hero'
 import Projects from '@/src/components/Projects/Projects'
 import TechCarousel from '@/src/components/TechCarousel/TechCarousel'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Home() {
@@ -21,6 +23,7 @@ export default function Home() {
         <Contact />
       </div>
       {/* <CvButton /> */}
+      <ToastContainer />
     </main>
   )
 }

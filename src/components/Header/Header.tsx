@@ -89,9 +89,9 @@ export const Header = () => {
                                 onClick={() => setIsModalOpen(true)}
                                 className='flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1'
                             >
-                                <ImProfile size={36} className="md:hidden block" />
+                                <ImProfile size={32} className="md:hidden block" />
                             </button>
-                            <AiOutlineClose size={36} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} />
+                            <AiOutlineClose size={32} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} />
                         </motion.div>
                     )
                         :
@@ -106,9 +106,9 @@ export const Header = () => {
                                     onClick={() => setIsModalOpen(true)}
                                     className='flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1'
                                 >
-                                    <ImProfile size={36} className="md:hidden block" />
+                                    <ImProfile size={32} className="md:hidden block" />
                                 </button>
-                                <AiOutlineMenu size={36} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} />
+                                <AiOutlineMenu size={32} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} />
                             </motion.div>
                         )
                 }
