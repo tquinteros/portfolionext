@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState, useEffect, useRef } from 'react'
-import { AiOutlineMenu, AiOutlineClose, AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai'
+import { AiOutlineMenu, AiOutlineClose, AiOutlineGithub, AiFillLinkedin, AiOutlineDownload } from 'react-icons/ai'
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,6 +42,13 @@ export const Header = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/Cv.pdf';
+        link.download = 'Cv.pdf';
+        link.click();
+    };
 
     return (
         <header
@@ -80,6 +87,13 @@ export const Header = () => {
                                 <a href='https://www.linkedin.com/in/tomas-quinteros1/' target='_blank' rel='noopener noreferrer'>
                                     <AiFillLinkedin size={52} className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300" />
                                 </a>
+                                <button
+                                    onClick={handleDownload}
+                                    className='flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1'
+                                >
+                                    <AiOutlineDownload size={40} />
+                                    CV
+                                </button>
                             </div>
                         </motion.ul>
                     )
@@ -104,6 +118,13 @@ export const Header = () => {
                         <a href='https://www.linkedin.com/in/tomas-quinteros1/' target='_blank' rel='noopener noreferrer'>
                             <AiFillLinkedin size={40} className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300" />
                         </a>
+                        <button
+                            onClick={handleDownload}
+                            className='flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1'
+                        >
+                            <AiOutlineDownload size={40} />
+                            CV
+                        </button>
                     </div>
                 </motion.ul>
             </nav>

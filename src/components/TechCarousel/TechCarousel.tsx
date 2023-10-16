@@ -45,7 +45,7 @@ const TechCarousel: React.FC = () => {
         autoplay: true,
         arrows: false,
         infinite: true,
-        speed: 750,
+        speed: 1000,
         drag: true,
         autoplaySpeed: 750,
         slidesToShow: 5.5,
