@@ -63,6 +63,10 @@ export const techsCarouselIcons = [
         label: 'Framer',
     },
     {
+        icon: '/techs/mui.svg',
+        label: 'Material UI',
+    },
+    {
         icon: '/techs/styled.svg',
         label: 'Styled Components',
     },

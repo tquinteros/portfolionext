@@ -1,10 +1,9 @@
-import CvButton from '@/src/components/Cv/Cv'
+// import CvButton from '@/src/components/Cv/Cv'
+import Contact from '@/src/components/Contact/Contact'
 import Header from '@/src/components/Header/Header'
 import Hero from '@/src/components/Hero/Hero'
 import Projects from '@/src/components/Projects/Projects'
-import Tabs from '@/src/components/Tabs/Tabs'
 import TechCarousel from '@/src/components/TechCarousel/TechCarousel'
-import Image from 'next/image'
 
 
 export default function Home() {
@@ -18,9 +17,9 @@ export default function Home() {
       <div className='container mx-auto'>
         <Projects />
       </div>
-      {/* <div className='container mx-auto'>
-        <Tabs />
-      </div> */}
+      <div className='container mx-auto'> 
+        <Contact />
+      </div>
       {/* <CvButton /> */}
     </main>
   )

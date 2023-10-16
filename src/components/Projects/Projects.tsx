@@ -4,7 +4,7 @@ import { projects } from "@/data/projects";
 
 export const Projects = () => {
     return (
-        <section>
+        <div className="mb-32" id="projects">
             <div className="mb-14">
                 <h1 className="text-5xl font-bold text-center ">Projects</h1>
                 <div className="flex justify-center">
@@ -18,7 +18,7 @@ export const Projects = () => {
                     ))
                 }
             </div>
-        </section>
+        </div>
     )
 }
 

@@ -58,7 +58,7 @@ const Hero = () => {
         //         </motion.div>
         //     </div>
         // </div>
-        <div className='w-full h-screen z-10'>
+        <div className='w-full h-screen z-10' id='hero'>
             <div className="absolute w-full -z-50 h-full top-0 left-0">
                 <Particles
                     className="w-full h-full"

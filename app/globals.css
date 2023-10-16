@@ -3,11 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #050816;
   color: white;
   font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
 }
 
 .green-pink-gradient {
