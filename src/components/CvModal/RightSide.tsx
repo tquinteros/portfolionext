@@ -5,7 +5,7 @@ import { BsBriefcase } from "react-icons/bs";
 import { RxAvatar } from "react-icons/rx";
 const RightSide = () => {
     return (
-        <div className="lg:col-span-8 col-span-12 p-6 pb-16 border-2 border-[#9999ff] rounded-lg flex flex-col gap-8 ">
+        <div className="xl:col-span-8 md:col-span-6 col-span-12 p-6 pb-16 border-2 border-[#9999ff] rounded-lg flex flex-col gap-8 ">
 
             <div className="flex flex-col gap-4">
                 <h3 className="text-2xl md:text-4xl flex items-center gap-3 md:gap-6">
@@ -76,8 +76,8 @@ const RightSide = () => {
                     <div className="flex items-center gap-4">
                         <a href="https://www.zetaequis.com" target="_blank" className="text-xl font-bold hover:opacity-75 duration-300"><Image src="/zetaequis.jpeg" width={64} height={64} alt="Me" className="rounded-full" /></a>
                         <div className="flex flex-col gap-1">
-                            <a href="https://www.zetaequis.com" target="_blank" className="text-xl font-bold hover:opacity-75 duration-300">Zetaequis</a>
-                            <h3 className="text-md font-bold">2022 - Present &nbsp; | &nbsp; Frontend Developer</h3>
+                            <h3 className="text-xl font-bold">Zetaequis</h3>
+                            <h3 className="text-md font-bold">2022 - Present &nbsp; | &nbsp; Frontend <span className="md:block hidden">Developer</span></h3>
                         </div>
                     </div>
                 </div>

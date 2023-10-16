@@ -10,7 +10,7 @@ import { RiJavascriptFill } from "react-icons/ri";
 const ContentModal = () => {
     return (
         <div className="grid grid-cols-12 pb-8 md:gap-8">
-            <div className="lg:col-span-4 col-span-12 pb-16 mb-8 md:mb-0 p-6 flex flex-col gap-6 border-2 border-[#9999ff] rounded-lg">
+            <div className="xl:col-span-4 md:col-span-6 col-span-12 pb-16 mb-8 md:mb-0 p-6 flex flex-col gap-6 border-2 border-[#9999ff] rounded-lg">
                 <div className="flex justify-center">
                     <Image src="/me.jpeg" width={200} height={200} alt="Me" className="rounded-full" />
                 </div>
