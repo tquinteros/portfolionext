@@ -82,7 +82,7 @@ const Hero = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.2 }}
                     >
-                        <h1 className='mb-5 text-4xl leading-tight md:mb-10'>Si puedes pensarlo, <br /> <span className='green-text-gradient'>puedes programarlo</span></h1>
+                        <h1 className='mb-5 text-4xl leading-tight md:mb-10'>Tomás Quinteros, <br /> <span className='green-text-gradient'>Frontend Developer</span></h1>
                         <p className='max-w-sm mb-10 text-xl md:max-w-2xl md:mx-0 md:mb-16 md:text-xl'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur earum laboriosam obcaecati eaque voluptatum porro ut ex delectus dolorem excepturi.
                         </p>
