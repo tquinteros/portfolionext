@@ -24,7 +24,7 @@ const ContentModal = () => {
                         <hr className="w-[25%]" />
                     </div>
                     <a className="flex hover:opacity-75 duration-300 gap-2 w-fit items-center" href="mailto:tomyquinteros494@gmail.com">
-                        <AiOutlineMail size={32} />
+                        <AiOutlineMail size={40} />
                         <span className="text-md font-semibold">tomyquinteros494@gmail.com</span>
                     </a>
                     <a className="flex hover:opacity-75 duration-300 gap-2 w-fit items-center" href='https://github.com/tquinteros' target='_blank' rel='noopener noreferrer'>
