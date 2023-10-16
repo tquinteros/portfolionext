@@ -83,7 +83,14 @@ export const Header = () => {
                             initial={{ y: 50, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ duration: 1.2 }}
+                            className='flex items-center gap-4'
                         >
+                            <button
+                                onClick={() => setIsModalOpen(true)}
+                                className='flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1'
+                            >
+                                <ImProfile size={40} />
+                            </button>
                             <AiOutlineClose size={48} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} />
                         </motion.div>
                     )
@@ -93,7 +100,14 @@ export const Header = () => {
                                 initial={{ y: 50, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ duration: 1.2 }}
+                                className='flex items-center gap-4'
                             >
+                                <button
+                                    onClick={() => setIsModalOpen(true)}
+                                    className='flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1'
+                                >
+                                    <ImProfile size={40} />
+                                </button>
                                 <AiOutlineMenu size={48} className="md:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)} />
                             </motion.div>
                         )
@@ -116,13 +130,6 @@ export const Header = () => {
                                 <a href='https://www.linkedin.com/in/tomas-quinteros1/' target='_blank' rel='noopener noreferrer'>
                                     <AiFillLinkedin size={52} className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300" />
                                 </a>
-                                <button
-                                    onClick={handleDownload}
-                                    className='flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1'
-                                >
-                                    <AiOutlineDownload size={40} />
-                                    CV
-                                </button>
                             </div>
                         </motion.ul>
                     )

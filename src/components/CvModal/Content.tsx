@@ -5,16 +5,18 @@ import RightSide from "./RightSide";
 import { IoLogoCss3 } from "react-icons/io5";
 import { BiLogoTypescript, BiLogoTailwindCss, BiLogoReact } from "react-icons/bi";
 import { SiNextdotjs } from "react-icons/si";
-import {  TbBrandFramerMotion } from "react-icons/tb";
+import { TbBrandFramerMotion } from "react-icons/tb";
 import { RiJavascriptFill } from "react-icons/ri";
 const ContentModal = () => {
     return (
-        <div className="grid grid-cols-12 pb-8 gap-4">
-            <div className="lg:col-span-4 col-span-12 pb-16 p-6 flex flex-col gap-6 border-2 rounded-lg">
-                <Image src="/me.jpeg" width={200} height={200} alt="Me" className="rounded-full" />
+        <div className="grid grid-cols-12 pb-8 md:gap-8">
+            <div className="lg:col-span-4 col-span-12 pb-16 mb-8 md:mb-0 p-6 flex flex-col gap-6 border-2 border-[#9999ff] rounded-lg">
+                <div className="flex justify-center">
+                    <Image src="/me.jpeg" width={200} height={200} alt="Me" className="rounded-full" />
+                </div>
                 <div>
-                    <h3 className="text-xl font-bold">Tomás Quinteros</h3>
-                    <h3 className="text-xl font-bold">Frontend Developer</h3>
+                    <h3 className="text-xl font-bold text-center">Tomás Quinteros</h3>
+                    <h3 className="text-xl font-bold text-center">Frontend Developer</h3>
                 </div>
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-col items-center gap-1">
