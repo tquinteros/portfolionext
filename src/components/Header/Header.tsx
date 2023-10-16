@@ -68,7 +68,7 @@ export const Header = () => {
             <nav className='flex justify-between px-4 md:px-0 container mx-auto items-center'>
                 <motion.div initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1.2 }}
+                    transition={{ duration: 1.2, delay: 0.3 }}
                 >
                     <Link href="/" className="flex items-center gap-2 cursor-pointer  hover:opacity-75 duration-300" onClick={() => {
                         window.scrollTo(0, 0)
@@ -82,7 +82,7 @@ export const Header = () => {
                         <motion.div
                             initial={{ y: 50, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 1.2 }}
+                            transition={{ duration: 1.2, delay: 0.3 }}
                             className='flex items-center gap-4'
                         >
                             <button
@@ -99,7 +99,7 @@ export const Header = () => {
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
-                                transition={{ duration: 1.2 }}
+                                transition={{ duration: 1.2, delay: 0.3 }}
                                 className='flex items-center gap-4'
                             >
                                 <button
@@ -137,7 +137,7 @@ export const Header = () => {
                 <motion.ul
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1.2 }}
+                    transition={{ duration: 1.2, delay: 0.3 }}
                     className='md:gap-12 hidden md:flex md:items-center'>
                     {navLinks.map((navLink, index) => (
                         <li className='font-bold relative hover:opacity-75 duration-300 group' key={index}>

@@ -14,7 +14,7 @@ const RightSide = () => {
                     About me
                 </h3>
                 <p className="max-w-xl text-md">
-                    Experienced web developer specialized in Next.js, TypeScript, Tailwind CSS, and more. Skilled in creating web3 integrity, landing pages, and e-commerce, particularly through TiendaNube. Currently contributing to innovative web application development at ZX. Studied programming at UTN and further honed skills at CoderHouse.
+                    Experienced web developer with expertise in Next.js, TypeScript, Tailwind CSS, and more. Skilled in building web3 integrity, landing pages, and e-commerce, particularly using TiendaNube. Currently contributing to innovative web application development at ZX. I studied programming at UTN, however I did not finish my studies for personal reasons and I started studying web development at coderhouse, which is what I currently do.
                 </p>
             </div>
 

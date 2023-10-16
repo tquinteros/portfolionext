@@ -73,14 +73,14 @@ const Hero = () => {
                     <motion.div className='hidden w-auto h-auto mx-auto md:block'
                         initial={{ opacity: 0, x: -80 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1.2 }}
+                        transition={{ duration: 1.2, delay: 0.3 }}
                     >
                         <Image src="/hero1.png" className='z-40 relative' width={650} height={650} alt="Hero" />
                     </motion.div>
                     <motion.div className=''
                         initial={{ opacity: 0, x: 80 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1.2 }}
+                        transition={{ duration: 1.2, delay: 0.3 }}
                     >
                         <h1 className='mb-5 text-4xl leading-tight md:mb-10'>Tomás Quinteros, <br /> <span className='green-text-gradient'>Frontend Developer</span></h1>
                         <p className='max-w-sm mb-10 text-xl md:max-w-2xl md:mx-0 md:mb-16 md:text-xl'>
