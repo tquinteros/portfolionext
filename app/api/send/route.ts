@@ -3,15 +3,12 @@ import { EmailTemplate } from '@/src/components/Email/Email';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend('re_BaiK41By_49VaMtgUAXfXK4yTMAwnAWL8')
-// const resend = new Resend('re_59vwBMnJ_8q1MCy8PwpA7cExPq22mcCdF')
+const resend = new Resend('re_BaiK41By_49VaMtgUAXfXK4yTMAwnAWL8');
 
-
-export async function POST(request: NextResponse, res: NextApiResponse) {
-
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
-        const body = await request.json();
-        console.log(body)
+        const body = JSON.parse(req.body);
+        console.log(body);
         const { email, name, message } = body;
         const data = await resend.emails.send({
             from: 'PortFolio <onboarding@resend.dev>',
@@ -21,14 +18,9 @@ export async function POST(request: NextResponse, res: NextApiResponse) {
             text: message,
         });
 
-        // if (data.status === 'success') {
-        //     return NextResponse.json({ status: 'success' })
-        // }
-        return NextResponse.json(data)
-
+        return res.status(200).json(data);
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        return res.status(500).json({ message: "Error" });
     }
-
-
 }
