@@ -47,6 +47,7 @@ const TechCarousel: React.FC = () => {
         infinite: true,
         speed: 1000,
         drag: true,
+        pauseOnHover: false,
         autoplaySpeed: 750,
         slidesToShow: 5.5,
         slidesToScroll: 1,
@@ -62,7 +63,7 @@ const TechCarousel: React.FC = () => {
 
     return (
         <div className="">
-            <Slider {...settings}>
+            <Slider {...settings} className="cursor-grab">
                 {/* {techsCarousel.map((tech, index) => (
                     <div key={index} className="flex justify-center">
                         <div className="flex flex-col items-center justify-center">

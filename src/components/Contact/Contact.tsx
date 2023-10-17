@@ -63,11 +63,12 @@ const Contact = () => {
         <div id="contact" className="mb-64">
             <div className="grid grid-cols-12  gap-4">
                 <div className="col-span-12 hidden md:flex md:justify-center md:items-center md:col-span-6">
-                    <Image src="/contact.png" width={1000} height={1000} className="w-full" alt="Contact" />
+                    {/* <Image src="/contact.png" width={1000} height={1000} className="w-full" alt="Contact" /> */}
+                    IMAGE
                 </div>
                 <div className="col-span-12 flex flex-col gap-6 p-6  md:col-span-6">
-                    <h3 className="green-text-gradient text-6xl font-extrabold">Let&apos;s Talk!</h3>
-                    <p className="text-xl max-w-md font-bold">Feel free to reach out if you have any questions or just want to say hi.</p>
+                    <h3 className="green-text-gradient text-6xl font-extrabold">Lorem Ipsum</h3>
+                    <p className="text-xl max-w-md font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam.</p>
                     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                         <Input
                             onChange={(e) => setName(e.target.value)}
