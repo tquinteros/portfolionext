@@ -44,7 +44,7 @@ export const techsCarouselIcons = [
     },
     {
         icon: '/techs/javascript.svg',
-        label: 'Javascript',
+        label: 'JavaScript',
     },
     {
         icon: '/techs/react.svg',
@@ -56,11 +56,11 @@ export const techsCarouselIcons = [
     },
     {
         icon: '/techs/typescript.svg',
-        label: 'Typescript',
+        label: 'TypeScript',
     },
     {
         icon: '/techs/framer.svg',
-        label: 'Framer',
+        label: 'Framer Motion',
     },
     {
         icon: '/techs/mui.svg',

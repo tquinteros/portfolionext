@@ -7,6 +7,7 @@ import { BiLogoTypescript, BiLogoTailwindCss, BiLogoReact } from "react-icons/bi
 import { SiNextdotjs } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { RiJavascriptFill } from "react-icons/ri";
+
 const ContentModal = () => {
     return (
         <div className="grid grid-cols-12 pb-8 md:gap-8">

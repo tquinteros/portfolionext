@@ -51,13 +51,6 @@ export const Header = () => {
         };
     }, []);
 
-    const handleDownload = () => {
-        const link = document.createElement('a');
-        link.href = '/Cv.pdf';
-        link.download = 'Cv.pdf';
-        link.click();
-    };
-
     return (
         <header
             className={`py-2 sticky top-0 z-[999] ${isTop ? 'bg-transparent' : 'bg-[#050816]'} duration-300`}

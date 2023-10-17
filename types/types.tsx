@@ -22,7 +22,7 @@ export interface InputProps {
     placeholder: string;
     name?: string;
     value?: string;
-    required: boolean;
+    required?: boolean;
     disabled?: boolean;
     className?: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

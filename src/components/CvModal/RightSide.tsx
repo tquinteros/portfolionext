@@ -3,6 +3,7 @@ import React from "react";
 import { PiStudentBold } from "react-icons/pi";
 import { BsBriefcase } from "react-icons/bs";
 import { RxAvatar } from "react-icons/rx";
+
 const RightSide = () => {
     return (
         <div className="xl:col-span-8 md:col-span-6 col-span-12 p-6 pb-16 border-2 border-[#9999ff] rounded-lg flex flex-col gap-8 ">

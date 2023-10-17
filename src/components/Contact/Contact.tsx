@@ -15,6 +15,15 @@ const Contact = () => {
     const [loading, setLoading] = useState(false);
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        if (!name || !email || !message) return toast.error("Please fill all the fields!", {
+            position: "bottom-right",
+            theme: "dark",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true
+        });
         setLoading(true);
         const body = {
             name: name,
@@ -69,7 +78,7 @@ const Contact = () => {
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <Image src="/contact.png" width={600} height={600} className=" animate-spin animate-infinite animate-duration-[35000ms]" alt="Contact" />
+                        <Image src="/contact.png" width={600} height={600} className="select-none animate-spin animate-infinite animate-duration-[35000ms]" alt="Contact" />
                     </motion.div>
                 </div>
                 <div className="col-span-12 flex flex-col gap-6 p-6  md:col-span-6">
@@ -93,14 +102,14 @@ const Contact = () => {
                             placeholder="Name"
                             value={name}
                             label="Name"
-                            required />
+                            />
                         <Input
                             onChange={(e) => setEmail(e.target.value)}
-                            type="mail"
+                            type="email"
                             placeholder="Email"
                             value={email}
                             label="Email"
-                            required />
+                            />
                         <label>
                             Message
                             <textarea
@@ -108,7 +117,7 @@ const Contact = () => {
                                 name="message"
                                 value={message}
                                 rows={4}
-                                required
+                                
                                 onChange={(e) => setMessage(e.target.value)}
                                 className="border px-4 bg-[#151030] border-black rounded-md p-2 mt-2 w-full"
                             />
