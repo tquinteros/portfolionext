@@ -1,11 +1,12 @@
 "use client"
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Input from "../Input/Input";
 import { toast } from "react-toastify";
 import Image from "next/image";
-// const resend = new Resend('re_59vwBMnJ_8q1MCy8PwpA7cExPq22mcCdF') PORTFOLIO
+import { motion } from "framer-motion";
 
+// const resend = new Resend('re_59vwBMnJ_8q1MCy8PwpA7cExPq22mcCdF') PORTFOLIO
 const Contact = () => {
 
     const [name, setName] = useState("");
@@ -63,13 +64,29 @@ const Contact = () => {
         <div id="contact" className="mb-64">
             <div className="grid grid-cols-12  gap-4">
                 <div className="col-span-12 hidden md:flex md:justify-center md:items-center md:col-span-6">
-                    {/* <Image src="/contact.png" width={1000} height={1000} className="w-full" alt="Contact" /> */}
-                    IMAGE
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <Image src="/contact.png" width={600} height={600} className=" animate-spin animate-infinite animate-duration-[35000ms]" alt="Contact" />
+                    </motion.div>
                 </div>
                 <div className="col-span-12 flex flex-col gap-6 p-6  md:col-span-6">
-                    <h3 className="green-text-gradient text-6xl font-extrabold">Lorem Ipsum</h3>
-                    <p className="text-xl max-w-md font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam.</p>
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="flex flex-col gap-2"
+                    >
+                        <h3 className="green-text-gradient text-6xl font-extrabold">Contact Me!</h3>
+                        <p className="text-xl max-w-md font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam.</p>
+                    </motion.div>
+                    <motion.form
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.2 }}
+                        onSubmit={handleSubmit} className="flex flex-col gap-4">
                         <Input
                             onChange={(e) => setName(e.target.value)}
                             type="text"
@@ -111,7 +128,7 @@ const Contact = () => {
                                 Send
                             </button>
                         </div>
-                    </form>
+                    </motion.form>
                 </div>
             </div>
         </div>
