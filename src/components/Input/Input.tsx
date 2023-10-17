@@ -1,7 +1,7 @@
 import React from 'react'
 import { InputProps } from '@/types/types';
 
-const Input = ({ label, type, placeholder, name, value, onChange, required }: InputProps) => {
+const Input = ({ label, type, placeholder, name, value, onChange, required, className }: InputProps) => {
     return (
         <label>
             {label}
@@ -12,7 +12,7 @@ const Input = ({ label, type, placeholder, name, value, onChange, required }: In
                 value={value}
                 onChange={onChange}
                 required={required}
-                className="border px-4 bg-[#151030] border-black rounded-md p-2 mt-2 w-full"
+                className={`border px-4 bg-[#151030] border-black rounded-md p-2 mt-2 w-full ${className}`}
             />
         </label>
     )
