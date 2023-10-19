@@ -2,36 +2,45 @@
 
 import React from "react";
 import { ProjectsCardProps } from "@/types/types";
-import Tilt from 'react-parallax-tilt';
 import Image from "next/image";
 import { motion } from "framer-motion";
 import TechBadge from "../TechBadge/TechBadge";
+import { AiOutlineGithub, AiOutlineLink } from 'react-icons/ai'
 
-
-export const ProjectsCard = ({ title, description, image, index, techs }: ProjectsCardProps) => {
+export const ProjectsCard = ({ title, description, image, index, techs, deploy, github }: ProjectsCardProps) => {
     return (
-        <Tilt perspective={500} className="md:col-span-4 min-h-[300px] col-span-12 w-full bg-[#151030] border-red-500 border p-[1px] rounded-[20px] shadow-card">
+        <div className="md:col-span-4 relative col-span-12 w-full">
             <motion.div
-                className=""
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: (.75 * index) }}
+                className="relative shadow-card"
+                initial={{ y: 0 }}
+                whileHover={{ y: -10 }}
+                transition={{ duration: 0.3 }}
             >
-                <div className="bg-[#151030] rounded-[20px] flex flex-col gap-6">
-                    <Image src={image} alt={title} width={400} className="h-[200px] w-full rounded-t-[20px] rounded object-cover" height={300} />
-                    <div className=" px-6">
-                        <h1 className="text-2xl font-bold">{title}</h1>
-                        <p>{description}</p>
-                    </div>
-                    <div className="flex px-6 pb-4 flex-wrap gap-6">
-                        {techs?.map((tech, index) => {
-                            return (
+                <div className="group">
+                    <Image src={image} alt={title} width={500} height={300} className="object-cover rounded-lg h-[330px]" />
+                    <div className="opacity-0 bg-black bg-opacity-30 absolute inset-0 flex flex-col justify-end px-6 py-4 duration-300 group-hover:opacity-100">
+                        <h1 className="text-2xl font-bold text-white">{title}</h1>
+                        <p className="text-white">{description}</p>
+                        <div className="flex flex-wrap gap-2 mt-2">
+                            {techs?.map((tech, index) => (
                                 <TechBadge key={index} label={tech} />
+                            ))}
+                        </div>
+                    </div>
+                    <div className="opacity-0 gap-8 bg-opacity-30 top-0 right-0 absolute flex px-6 py-4 duration-300 group-hover:opacity-100">
+                        {
+                            deploy && (
+                                <a className="cursor-pointer" target="_blank" href={deploy}><AiOutlineLink size={40} /></a>
                             )
-                        })}
+                        }
+                        {
+                            github && (
+                                <a className="cursor-pointer" target="_blank" href={github}><AiOutlineGithub size={40} /></a>
+                            )
+                        }
                     </div>
                 </div>
             </motion.div>
-        </Tilt>
-    )
-}
+        </div>
+    );
+};
