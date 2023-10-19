@@ -1,12 +1,12 @@
 export const projects = [
-    {
-        title: "RAWR Connect",
-        description: "This is a project",
-        image: "/rawr.png",
-        techs: ["NextJs", "Material UI", "Styled Components"],
-        github: "",
-        deploy: "https://rawr-connect.vercel.app/",
-    },
+    // {
+    //     title: "RAWR Connect",
+    //     description: "This is a project",
+    //     image: "/rawr.png",
+    //     techs: ["NextJs", "Material UI", "Styled Components"],
+    //     github: "",
+    //     deploy: "https://rawr-connect.vercel.app/",
+    // },
     {
         title: "UndefinedBA",
         description: "This is a project",
@@ -31,12 +31,12 @@ export const projects = [
         github: "https://tquinteros.github.io/conversorDivisas/",
         deploy: "https://github.com/tquinteros/conversorDivisas",
     },
-    {
-        title: "Project2",
-        description: "This is a project",
-        image: "/rawr.png",
-        techs: ["tech1", "tech2"],
-        github: "",
-        deploy: "",
-    },
+    // {
+    //     title: "Project2",
+    //     description: "This is a project",
+    //     image: "/rawr.png",
+    //     techs: ["tech1", "tech2"],
+    //     github: "",
+    //     deploy: "",
+    // },
 ]

@@ -59,6 +59,10 @@ export const techsCarouselIcons = [
         label: 'TypeScript',
     },
     {
+        icon: '/techs/tailwind.svg',
+        label: 'Tailwind CSS',
+    },
+    {
         icon: '/techs/framer.svg',
         label: 'Framer Motion',
     },
