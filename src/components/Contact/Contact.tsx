@@ -70,7 +70,7 @@ const Contact = () => {
 
 
     return (
-        <div id="contact" className="mb-64">
+        <div id="contact" className="mb-32">
             <div className="grid grid-cols-12  gap-4">
                 <div className="col-span-12 hidden md:flex md:justify-center md:items-center md:col-span-6">
                     <motion.div
