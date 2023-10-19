@@ -30,12 +30,16 @@ export const ProjectsCard = ({ title, description, image, index, techs, deploy, 
                     <div className="opacity-0 gap-8 bg-opacity-30 top-0 right-0 absolute flex px-6 py-4 duration-300 group-hover:opacity-100">
                         {
                             deploy && (
-                                <a className="cursor-pointer" target="_blank" href={deploy}><AiOutlineLink size={40} /></a>
+                                <div className=" bg-gray-400/30 hover:opacity-75 duration-300 p-2 rounded-lg">
+                                    <a className="cursor-pointer" target="_blank" href={deploy}><AiOutlineLink size={40} /></a>
+                                </div>
                             )
                         }
                         {
                             github && (
-                                <a className="cursor-pointer" target="_blank" href={github}><AiOutlineGithub size={40} /></a>
+                                <div className=" bg-gray-400/30 hover:opacity-75 duration-300 p-2 rounded-lg">
+                                    <a className="cursor-pointer" target="_blank" href={github}><AiOutlineGithub size={40} /></a>
+                                </div>
                             )
                         }
                     </div>
