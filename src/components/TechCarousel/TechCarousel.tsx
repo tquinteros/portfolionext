@@ -62,7 +62,7 @@ const TechCarousel: React.FC = () => {
     };
 
     return (
-        <div className="">
+        <div className="my-16">
             <Slider {...settings} className="cursor-grab">
                 {/* {techsCarousel.map((tech, index) => (
                     <div key={index} className="flex justify-center">
