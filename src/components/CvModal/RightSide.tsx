@@ -60,7 +60,7 @@ const RightSide = () => {
                         <div className="flex flex-col gap-1">
                             <h3 className="text-xl hidden md:block font-bold">Universidad Tecnológica Nacional</h3>
                             <h3 className="text-xl block md:hidden font-bold">UTN</h3>
-                            <h3 className="text-md font-bold">2020 - 2021 &nbsp; | &nbsp; Tecnicatura Universitaria en Programación</h3>
+                            <h3 className="text-md font-bold">2021 - 2022 &nbsp; | &nbsp; Tecnicatura Universitaria en Programación</h3>
                         </div>
                     </div>
                 </div>
