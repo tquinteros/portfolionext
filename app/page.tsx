@@ -16,9 +16,9 @@ export default function Home() {
         <Hero />
       </div>
       <TechCarousel />
-      {/* <div className='container mx-auto'>
+      <div className='container mx-auto'>
         <Projects />
-      </div> */}
+      </div>
       <div className='container mx-auto'> 
         <Contact />
       </div>

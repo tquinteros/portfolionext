@@ -4,6 +4,8 @@ export interface ProjectsCardProps {
     image: string;
     index: number;
     techs?: string[];
+    deploy?: string;
+    github?: string;
 }
 
 export interface TechBadgeProps {
