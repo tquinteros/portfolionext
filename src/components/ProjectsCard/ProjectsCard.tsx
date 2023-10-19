@@ -9,7 +9,7 @@ import { AiOutlineGithub, AiOutlineLink } from 'react-icons/ai'
 
 export const ProjectsCard = ({ title, description, image, index, techs, deploy, github }: ProjectsCardProps) => {
     return (
-        <div className="md:col-span-4 relative col-span-12 w-full">
+        <div className="md:col-span-4 mt-4 md:mt-0 relative col-span-12 w-full">
             <motion.div
                 className="relative shadow-card"
                 initial={{ y: 0 }}

@@ -40,14 +40,14 @@ const Hero = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.2, delay: 0.3 }}
                     >
-                        <h1 className='mb-3 text-4xl leading-tight md:mb-10'>Lorem Ipsum, <br /> <span className='green-text-gradient'>Lorem Ipsum</span></h1>
+                        <h1 className='mb-3 text-4xl leading-tight md:mb-10'>Tomás Quinteros, <br /> <span className='green-text-gradient'>Frontend Developer</span></h1>
                         <p className='max-w-sm mb-10 text-xl md:max-w-xl md:mx-0 md:mb-16 md:text-xl'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur earum laboriosam obcaecati eaque voluptatum porro ut ex delectus dolorem excepturi.
                         </p>
-                        <div className='flex flex-col items-center gap-3 md:gap-10 md:flex-row'>
+                        {/* <div className='flex flex-col items-center gap-3 md:gap-10 md:flex-row'>
                             <button>asd</button>
                             <button>asd</button>
-                        </div>
+                        </div> */}
                     </motion.div>
                 </div>
             </div>

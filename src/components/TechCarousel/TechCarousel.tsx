@@ -95,7 +95,7 @@ const TechCarousel: React.FC = () => {
                     })
                 }
             </Slider>
-            <div className='relative mt-12'>
+            {/* <div className='relative mt-12'>
                 <h1 className='text-4xl mb-2 text-center font-bold'>COLORES</h1>
                 <div className='flex justify-center gap-4'>
                     <span className="block w-10 h-8 my-6 bg-custom-color1"></span>
@@ -110,7 +110,7 @@ const TechCarousel: React.FC = () => {
                     <span className="block w-10 h-8 my-6 bg-custom-color10"></span>
                     <span className="block w-10 h-8 my-6 bg-custom-color11"></span>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
