@@ -8,6 +8,14 @@ export const projects = [
     //     deploy: "https://rawr-connect.vercel.app/",
     // },
     {
+        title: "GM Studios",
+        description: "This is a project",
+        image: "/gm.png",
+        techs: ["NextJs", "Material UI", "Styled Components"],
+        github: "",
+        deploy: "https://www.gmstudios.gg/",
+    },
+    {
         title: "UndefinedBA",
         description: "This is a project",
         image: "/undefined.png",
@@ -24,6 +32,14 @@ export const projects = [
         deploy: "https://moviesapp-mauve.vercel.app/",
     },
     {
+        title: "Notte Clothing",
+        description: "This is a project",
+        image: "/notte.png",
+        techs: ["TiendaNube", "Javascript", "CSS"],
+        github: "",
+        deploy: "https://www.notteclothing.com.ar/",
+    },
+    {
         title: "Divisa Converter",
         description: "This is a project",
         image: "/conversordivisas.png",
@@ -31,12 +47,4 @@ export const projects = [
         github: "https://tquinteros.github.io/conversorDivisas/",
         deploy: "https://github.com/tquinteros/conversorDivisas",
     },
-    // {
-    //     title: "Project2",
-    //     description: "This is a project",
-    //     image: "/rawr.png",
-    //     techs: ["tech1", "tech2"],
-    //     github: "",
-    //     deploy: "",
-    // },
 ]
