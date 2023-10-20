@@ -42,12 +42,26 @@ const Hero = () => {
                     >
                         <h1 className='mb-3 text-4xl leading-tight md:mb-10'>Tomás Quinteros, <br /> <span className='green-text-gradient'>Frontend Developer</span></h1>
                         <p className='max-w-sm mb-10 text-xl md:max-w-xl md:mx-0 md:mb-16 md:text-xl'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur earum laboriosam obcaecati eaque voluptatum porro ut ex delectus dolorem excepturi.
+                            Experienced web developer with expertise in Next.js, TypeScript, Tailwind CSS, and more. Skilled in building web3 integrity, landing pages, and e-commerce, particularly using TiendaNube.
                         </p>
-                        {/* <div className='flex flex-col items-center gap-3 md:gap-10 md:flex-row'>
-                            <button>asd</button>
-                            <button>asd</button>
-                        </div> */}
+                        <div className='flex flex-col items-center gap-3 md:gap-10 md:flex-row'>
+                            <a href='#projects' className={` relative inline-flex items-center justify-center px-12 py-4 overflow-hidden font-mono font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-2xl group`}>
+                                <span className={`absolute w-0 h-0 transition-all duration-500 ease-out bg-[#9999ff] rounded-full group-hover:w-56 group-hover:h-56`}></span>
+                                <span className="absolute inset-0 w-full h-full -mt-1 rounded-2xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
+                                <span className="relative">{
+                                    "Download CV"
+                                }</span>
+                            </a>
+                            <a href="#projects" className={` relative inline-flex items-center justify-center px-12 py-4 overflow-hidden font-mono font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-2xl group`}>
+                                <span className={`absolute w-0 h-0 transition-all duration-500 ease-out bg-[#9999ff] rounded-full group-hover:w-56 group-hover:h-56`}></span>
+                                <span className="absolute inset-0 w-full h-full -mt-1 rounded-2xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
+                                <span className="relative">{
+                                    "View Projects"
+                                }</span>
+                            </a>
+                        </div>
+
+
                     </motion.div>
                 </div>
             </div>

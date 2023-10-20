@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import Input from "../Input/Input";
 import { toast } from "react-toastify";
 import Image from "next/image";
@@ -13,23 +13,52 @@ const Contact = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
+    const [color, setColor] = useState("bg-green-500");
+
+    const isValidEmail = (email: string) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    };
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (!name || !email || !message) return toast.error("Please fill all the fields!", {
-            position: "bottom-right",
-            theme: "dark",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true
-        });
+        if (!name || !email || !message) {
+            setColor("bg-red-500");
+            toast.error("Please fill all the fields!", {
+                position: "bottom-right",
+                theme: "dark",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true
+            });
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            setColor("bg-red-500");
+            toast.error("Please enter a valid email address!", {
+                position: "bottom-right",
+                theme: "dark",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true
+            });
+            return;
+        }
+
         setLoading(true);
+        setColor("bg-green-500");
+
         const body = {
             name: name,
             email: email,
             message: message,
-        }
+        };
+
         const response = await fetch('/api/send', {
             method: 'POST',
             headers: {
@@ -37,6 +66,7 @@ const Contact = () => {
             },
             body: JSON.stringify(body),
         });
+
         if (response.status === 200) {
             toast.success("Message sent successfully!", {
                 position: "bottom-right",
@@ -47,7 +77,6 @@ const Contact = () => {
                 pauseOnHover: true,
                 draggable: true
             });
-            setLoading(false);
         } else {
             toast.error("Error sending email!", {
                 position: "bottom-right",
@@ -58,16 +87,15 @@ const Contact = () => {
                 pauseOnHover: true,
                 draggable: true
             });
-            setLoading(false);
         }
-    }
+        setLoading(false);
+    };
 
     const handleResetForm = () => {
         setName("");
         setEmail("");
         setMessage("");
     }
-
 
     return (
         <div id="contact" className="mb-32">
@@ -102,14 +130,16 @@ const Contact = () => {
                             placeholder="Name"
                             value={name}
                             label="Name"
-                            />
+                            required={false}
+                        />
                         <Input
                             onChange={(e) => setEmail(e.target.value)}
-                            type="email"
+                            type="text"
                             placeholder="Email"
                             value={email}
                             label="Email"
-                            />
+                            required={false}
+                        />
                         <label>
                             Message
                             <textarea
@@ -117,24 +147,34 @@ const Contact = () => {
                                 name="message"
                                 value={message}
                                 rows={4}
-                                
+                                required={false}
                                 onChange={(e) => setMessage(e.target.value)}
                                 className="border px-4 bg-[#151030] border-black rounded-md p-2 mt-2 w-full"
                             />
                         </label>
                         <div className="flex gap-4 justify-center items-center">
-                            <button
+                            <button onClick={handleResetForm} className="inline-block text-xl text-white bg-[#151030] px-12 py-3 hover:opacity-75 duration-300 rounded-2xl w-48">
+                                Reset
+                            </button>
+                            {/* <button
                                 onClick={handleResetForm}
                                 className="rounded-xl border font-bold text-2xl py-2 px-12"
                             >
                                 Reset
-                            </button>
-                            <button
+                            </button> */}
+                            {/* <button
                                 type="submit"
                                 disabled={loading}
                                 className={`rounded-xl border font-bold text-2xl py-2 px-12 ${loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
                             >
                                 Send
+                            </button> */}
+                            <button type="submit" disabled={loading} className={`${loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"} relative inline-flex items-center justify-center w-48 px-12 py-3 overflow-hidden font-mono font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-2xl group`}>
+                                <span className={`absolute w-0 h-0 transition-all duration-500 ease-out ${color} rounded-full group-hover:w-56 group-hover:h-56`}></span>
+                                <span className="absolute inset-0 w-full h-full -mt-1 rounded-2xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
+                                <span className="relative">{
+                                    loading ? "Sending..." : "Send"
+                                }</span>
                             </button>
                         </div>
                     </motion.form>
