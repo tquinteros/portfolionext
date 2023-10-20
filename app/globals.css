@@ -67,6 +67,7 @@ body {
   background: linear-gradient(to top, #ec008c, #fc6767);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
 }
 
 .shadow-card {
