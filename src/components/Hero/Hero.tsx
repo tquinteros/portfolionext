@@ -1,12 +1,15 @@
 "use client"
 
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import { motion } from 'framer-motion'
 import { optionsParticles } from './particleOptions'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
 import type { Engine } from 'tsparticles-engine'
 import Image from 'next/image'
+import Modal from '../CvModal/CvModal'
+import ContentModal from '../CvModal/Content'
+
 const Hero = () => {
 
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -14,6 +17,14 @@ const Hero = () => {
     }, [])
 
     const particlesLoaded = useCallback(async () => { }, [])
+
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/Cv.pdf';
+        link.download = 'Cv.pdf';
+        link.click();
+    };
+
 
     return (
         <div className='w-full h-screen z-10' id='hero'>
@@ -44,24 +55,22 @@ const Hero = () => {
                         <p className='max-w-sm mb-10 text-xl md:max-w-xl md:mx-0 md:mb-16 md:text-xl'>
                             Experienced web developer with expertise in Next.js, TypeScript, Tailwind CSS, and more. Skilled in building web3 integrity, landing pages, and e-commerce, particularly using TiendaNube.
                         </p>
-                        <div className='flex flex-col items-center gap-3 md:gap-10 md:flex-row'>
-                            <a href='#projects' className={` relative inline-flex items-center justify-center px-12 py-4 overflow-hidden font-mono font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-2xl group`}>
-                                <span className={`absolute w-0 h-0 transition-all duration-500 ease-out bg-[#9999ff] rounded-full group-hover:w-56 group-hover:h-56`}></span>
+                        <div className='flex md:max-w-xl max-w-sm flex-col md:flex-row gap-4 md:gap-8'>
+                            <button onClick={handleDownload} className={` relative inline-flex items-center justify-center px-12 py-4 overflow-hidden font-medium text-xl tracking-tighter w-full text-white bg-[#151030] rounded-2xl group`}>
+                                <span className={`absolute w-0 h-0 transition-all duration-500 ease-out bg-[#9999ff] rounded-full group-hover:w-full group-hover:h-56`}></span>
                                 <span className="absolute inset-0 w-full h-full -mt-1 rounded-2xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
                                 <span className="relative">{
                                     "Download CV"
                                 }</span>
-                            </a>
-                            <a href="#projects" className={` relative inline-flex items-center justify-center px-12 py-4 overflow-hidden font-mono font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-2xl group`}>
-                                <span className={`absolute w-0 h-0 transition-all duration-500 ease-out bg-[#9999ff] rounded-full group-hover:w-56 group-hover:h-56`}></span>
+                            </button>
+                            <a href="#projects" className={` relative inline-flex items-center justify-center px-12 py-4 overflow-hidden font-medium text-xl tracking-tighter text-white bg-[#151030] w-full rounded-2xl group`}>
+                                <span className={`absolute w-0 h-0 transition-all duration-500 ease-out bg-[#9999ff] rounded-full group-hover:w-full group-hover:h-56`}></span>
                                 <span className="absolute inset-0 w-full h-full -mt-1 rounded-2xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
                                 <span className="relative">{
                                     "View Projects"
                                 }</span>
                             </a>
                         </div>
-
-
                     </motion.div>
                 </div>
             </div>

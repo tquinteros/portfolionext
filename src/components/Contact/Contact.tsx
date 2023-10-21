@@ -169,7 +169,7 @@ const Contact = () => {
                             >
                                 Send
                             </button> */}
-                            <button type="submit" disabled={loading} className={`${loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"} relative inline-flex items-center justify-center w-48 px-12 py-3 overflow-hidden font-mono font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-2xl group`}>
+                            <button type="submit" disabled={loading} className={`${loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"} relative inline-flex items-center justify-center w-48 px-12 py-3 overflow-hidden font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-2xl group`}>
                                 <span className={`absolute w-0 h-0 transition-all duration-500 ease-out ${color} rounded-full group-hover:w-56 group-hover:h-56`}></span>
                                 <span className="absolute inset-0 w-full h-full -mt-1 rounded-2xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
                                 <span className="relative">{
