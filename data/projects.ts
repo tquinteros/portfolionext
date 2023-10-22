@@ -25,7 +25,7 @@ export const projects = [
     },
     {
         title: "Fake Ecommerce",
-        description: "",
+        description: "(Not finished)",
         image: "/ecommerce.jpg",
         techs: ["NextJs", "Redux", "Tailwind CSS"],
         github: "https://github.com/tquinteros/ecommercets",
