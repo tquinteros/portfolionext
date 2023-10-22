@@ -153,7 +153,7 @@ const Contact = () => {
                             />
                         </label>
                         <div className="flex gap-4 justify-center items-center">
-                            <button onClick={handleResetForm} className="inline-block text-xl text-white bg-[#151030] px-12 py-3 hover:opacity-75 duration-300 rounded-2xl w-48">
+                            <button onClick={handleResetForm} type="reset" className="inline-block text-xl text-white bg-[#151030] px-12 py-3 hover:opacity-75 duration-300 rounded-2xl w-48">
                                 Reset
                             </button>
                             {/* <button
