@@ -9,7 +9,7 @@ export const projects = [
     // },
     {
         title: "GM Studios",
-        description: "This is a project",
+        description: "",
         image: "/gm.png",
         techs: ["NextJs", "Material UI", "Styled Components"],
         github: "",
@@ -17,15 +17,23 @@ export const projects = [
     },
     {
         title: "UndefinedBA",
-        description: "This is a project",
+        description: "",
         image: "/undefined.png",
         techs: ["TiendaNube", "Javascript", "CSS"],
         github: "",
         deploy: "https://undefinedba.com/",
     },
     {
+        title: "Fake Ecommerce",
+        description: "",
+        image: "/ecommerce.jpg",
+        techs: ["NextJs", "Redux", "Tailwind CSS"],
+        github: "https://github.com/tquinteros/ecommercets",
+        deploy: "https://ecommercets.vercel.app/",
+    },
+    {
         title: "Movies App",
-        description: "This is a project",
+        description: "",
         image: "/movies.jpg",
         techs: ["NextJs", "Typescript", "Tailwind CSS"],
         github: "https://github.com/tquinteros/moviesapp",
@@ -33,7 +41,7 @@ export const projects = [
     },
     {
         title: "Notte Clothing",
-        description: "This is a project",
+        description: "",
         image: "/notte.png",
         techs: ["TiendaNube", "Javascript", "CSS"],
         github: "",
@@ -41,7 +49,7 @@ export const projects = [
     },
     {
         title: "Divisa Converter",
-        description: "This is a project",
+        description: "",
         image: "/conversordivisas.png",
         techs: ["HTML", "CSS", "Javascript"],
         github: "https://tquinteros.github.io/conversorDivisas/",
