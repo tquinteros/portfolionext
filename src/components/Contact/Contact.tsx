@@ -77,6 +77,9 @@ const Contact = () => {
                 pauseOnHover: true,
                 draggable: true
             });
+            setName("");
+            setEmail("");
+            setMessage("");
         } else {
             toast.error("Error sending email!", {
                 position: "bottom-right",
