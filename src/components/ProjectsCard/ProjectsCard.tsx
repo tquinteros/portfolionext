@@ -17,7 +17,7 @@ export const ProjectsCard = ({ title, description, image, index, techs, deploy, 
                 transition={{ duration: 0.3 }}
             >
                 <div className="group">
-                    <Image src={image} alt={title} width={500} height={300} className="object-cover rounded-lg h-[330px]" />
+                    <Image src={image} alt={title} width={500} height={300} className="object-cover w-full rounded-lg h-[330px]" />
                     <div className="opacity-0 bg-black bg-opacity-30 absolute inset-0 flex flex-col justify-end px-6 py-4 duration-300 group-hover:opacity-100">
                         <h1 className="text-2xl font-bold text-white">{title}</h1>
                         <p className="text-white">{description}</p>
