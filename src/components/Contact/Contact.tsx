@@ -120,7 +120,7 @@ const Contact = () => {
                         className="flex flex-col gap-2"
                     >
                         <h3 className="green-text-gradient text-6xl font-extrabold">Contact Me!</h3>
-                        <p className="text-xl max-w-md font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aperiam.</p>
+                        <p className="text-xl max-w-md font-bold">Feel free to send an email, your query does not bother.</p>
                     </motion.div>
                     <motion.form
                         initial={{ opacity: 0, y: 20 }}
