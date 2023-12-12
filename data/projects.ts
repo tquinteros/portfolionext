@@ -52,7 +52,7 @@ export const projects = [
         description: "",
         image: "/conversordivisas.png",
         techs: ["HTML", "CSS", "Javascript"],
-        github: "https://tquinteros.github.io/conversorDivisas/",
-        deploy: "https://github.com/tquinteros/conversorDivisas",
+        github: "https://github.com/tquinteros/conversorDivisas",
+        deploy: "https://tquinteros.github.io/conversorDivisas/",
     },
 ]
