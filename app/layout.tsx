@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Tomas Quinteros - Portfolio',
-  description: 'Frontend Developer',
+  description: 'Experienced web developer with expertise in Next.js, TypeScript, Tailwind CSS, and more. Skilled in building web3 integrity, landing pages, and e-commerce, particularly using TiendaNube.',
 }
 
 export default function RootLayout({
