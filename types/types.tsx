@@ -19,7 +19,8 @@ export interface HomeModalProps {
 }
 
 export interface InputProps {
-    label: string;
+    label?: string;
+    autoFocus?: boolean;
     type: string;
     placeholder: string;
     name?: string;

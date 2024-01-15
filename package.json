@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "ai": "^2.2.31",
     "framer-motion": "^10.16.4",
     "next": "latest",
+    "openai-edge": "^1.2.2",
     "react": "latest",
     "react-dom": "latest",
     "react-icons": "^4.11.0",
