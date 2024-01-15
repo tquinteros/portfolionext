@@ -6,7 +6,16 @@ import Image from "next/image";
 import { useState, useEffect, useRef, RefObject } from "react";
 import Input from "../Input/Input";
 
+const variants = {
+  open: { opacity: 1, scale: 1 },
+  closed: { opacity: 0, scale: 0 },
+
+}
+
 export default function ChatFloat() {
+
+
+  const [isOpen, setIsOpen] = useState(false)
   const [showChat, setShowChat] = useState(true);
   const [showAlert, setShowAlert] = useState(true);
   const { messages, input, handleInputChange, handleSubmit, isLoading } =
@@ -59,8 +68,9 @@ export default function ChatFloat() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="relative">
+        transition={{ duration: .3 }}
+        whileHover={{ scale: 1.2 }}
+        className="fixed bottom-4 right-4">
         {/* <motion.span
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,20 +78,20 @@ export default function ChatFloat() {
           transition={{ duration: 1, delay: 2.5 }}
           className={`mb-4 absolute -top-16 w-32 right-1/2 -translate-x-1/2 ${!showAlert ? "block" : "hidden"}`}
         >Talk with me</motion.span> */}
-        <Image onClick={handleOpenChat} src="/me.jpeg" width={48} height={48} alt="Me" className={`rounded-full cursor-pointer hover:opacity-75 duration-300 ${showChat ? "hidden" : "block"}`} />
+        <Image onClick={() => setIsOpen(isOpen => !isOpen)} src="/me.jpeg" width={48} height={48} alt="Me" className={`rounded-full cursor-pointer ${isOpen ? "hidden" : "block"}`} />
       </motion.div>
       <motion.form
         // ref={chat}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        animate={isOpen ? "open" : "closed"}
+        variants={variants}
+        transition={{ duration: .3 }}
         onSubmit={(event) => {
           event.preventDefault();
           setShowChat(true);
           handleSubmit(event);
         }}
         className={`${showChat ? "block" : "hidden"} bg-[#050816] border rounded-md p-6 max-w-sm`}>
-        <div onClick={handleCloseChat} className="flex justify-end mb-4 w-full cursor-pointer hover:opacity-75 duration-300">
+        <div onClick={() => setIsOpen(isOpen => !isOpen)} className="flex justify-end mb-4 w-full cursor-pointer hover:opacity-75 duration-300">
           <span className="text-2xl">X</span>
         </div>
 
@@ -94,13 +104,19 @@ export default function ChatFloat() {
                   `}
           >
             <div className="flex items-center mb-2 gap-2">
-              <Image src="/me.jpeg" width={24} height={24} alt="Me" className={`rounded-full cursor-pointer hover:opacity-75 duration-300`} />
-              <span
-                className={`text-xs text-right
+              <Image src="/me.jpeg" width={32} height={32} alt="Me" className={`rounded-full cursor-pointer hover:opacity-75 duration-300`} />
+              <div className="flex flex-col">
+                <span
+                  className={`text-xs text-right
                 `}
-              >
-                Tomás Quinteros
-              </span>{" "}
+                >
+                  Tomás Quinteros
+                </span>{" "}
+                <span className="text-xs flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#059669" d="M12 16a4 4 0 1 1 0-8a4 4 0 0 1 0 8Z" /></svg>
+                  Online
+                </span>
+              </div>
             </div>
             Ask me anything
           </div>
@@ -119,17 +135,28 @@ export default function ChatFloat() {
                   }`}
               >
                 {/* {m.role} */}
+
                 <Image
                   src="/me.jpeg"
-                  width={24}
-                  height={24}
+                  width={32}
+                  height={32}
                   alt="Me"
                   className={`${m.role === "user" ? "hidden" : "block"
                     } rounded-full cursor-pointer hover:opacity-75 duration-300`}
                 />
-                {m.role === "assistant" ? "Tomás Quinteros" : "USER"}
+                <div className="flex flex-col">
+                  {m.role === "assistant" ? "Tomás Quinteros" : "User"}
+                  {
+                    m.role === "assistant" && (
+                      <span className="text-xs flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#059669" d="M12 16a4 4 0 1 1 0-8a4 4 0 0 1 0 8Z" /></svg>
+                        Online
+                      </span>
+                    )
+                  }
+                </div>
               </span>{" "}
-              {insertSpaces(m.content, 25)}
+              {m.content}
             </div>
           ))}
         </div>

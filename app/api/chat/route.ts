@@ -21,7 +21,7 @@ export async function POST(request: Request) {
 
     const stream = OpenAIStream(response)
     
-    // return new StreamingTextResponse(stream);
+    return new StreamingTextResponse(stream);
     // return NextResponse.json({message: "Hola mi nombre es Tomás"})
-    return NextResponse.json("Hello my name is Tomás")
+    // return NextResponse.json("Hello my name is Tomás")
 }
