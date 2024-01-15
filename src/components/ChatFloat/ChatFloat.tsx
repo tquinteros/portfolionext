@@ -7,7 +7,7 @@ import { useState, useEffect, useRef, RefObject } from "react";
 import Input from "../Input/Input";
 
 export default function ChatFloat() {
-  const [showChat, setShowChat] = useState(true);
+  const [showChat, setShowChat] = useState(false);
   const { messages, input, handleInputChange, handleSubmit, isLoading } =
     useChat();
 
