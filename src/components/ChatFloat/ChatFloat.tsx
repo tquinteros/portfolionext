@@ -40,17 +40,17 @@ export default function ChatFloat() {
   function insertSpaces(text: string, maxLength: number) {
     let result = '';
     let currentLength = 0;
-  
+
     for (let i = 0; i < text.length; i++) {
       result += text[i];
       currentLength++;
-  
+
       if (currentLength >= maxLength && i < text.length - 1) {
         result += ' ';
         currentLength = 0;
       }
     }
-  
+
     return result;
   }
 
@@ -107,15 +107,15 @@ export default function ChatFloat() {
           {messages.map((m) => (
             <div
               key={m.id}
-              className={`flex flex-col mb-2 p-2 whitespace-normal overflow-wrap-break-word rounded-lg ${m.role === "assistant"
-                  ? "self-start items-start bg-gray-800"
-                  : "self-end items-end bg-blue-700"
+              className={`flex flex-col my-4 p-2 whitespace-normal overflow-wrap-break-word rounded-lg ${m.role === "assistant"
+                ? "self-start items-start bg-gray-800"
+                : "self-end items-end bg-blue-700"
                 }`}
             >
               <span
                 className={`text-xs ${m.role === "assistant"
-                    ? "text-left flex items-center gap-2 mb-2"
-                    : "text-right mb-2"
+                  ? "text-left flex items-center gap-2 mb-2"
+                  : "text-right mb-2"
                   }`}
               >
                 {/* {m.role} */}
@@ -142,31 +142,18 @@ export default function ChatFloat() {
             Send
           </button>
         </div> */}
-        <div className="flex items-end gap-3">
-          <Input
+        <div className="flex items-end justify-between mt-4 gap-3">
+          <input
             onChange={handleInputChange}
             type="text"
             placeholder="Type something..."
             value={input}
             autoFocus
+            className="mt-0 px-4 bg-[#151030] rounded-md p-2 w-full"
           />
-          {/* <input
-            value={input}
-            type="text"
-            onChange={handleInputChange}
-            className="border px-4 bg-[#151030] border-black rounded-md p-2 mt-2 w-full"
-            placeholder="Type something..."
-            autoFocus
-          /> */}
-          {/* <button
-            className="bg-blue-600 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 disabled:opacity-50"
-          // disabled={isLoading || !input}
-          >
-            Send
-          </button> */}
           <button
             type="submit"
-            className={` relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-md group`}>
+            className={`relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-md group`}>
             <span className={`absolute w-0 h-0 transition-all duration-500 ease-out bg-[#9999ff] rounded-full group-hover:w-full group-hover:h-56`}></span>
             <span className="absolute inset-0 w-full h-full -mt-1 rounded-2xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
             <span className="relative">{
