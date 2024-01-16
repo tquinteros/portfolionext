@@ -16,7 +16,7 @@ export default function ChatFloat() {
 
 
   const [isOpen, setIsOpen] = useState(false)
-  const [showChat, setShowChat] = useState(true);
+  const [showChat, setShowChat] = useState(false);
   const [showAlert, setShowAlert] = useState(true);
   const { messages, input, handleInputChange, handleSubmit, isLoading } =
     useChat();
@@ -78,7 +78,7 @@ export default function ChatFloat() {
           transition={{ duration: 1, delay: 2.5 }}
           className={`mb-4 absolute -top-16 w-32 right-1/2 -translate-x-1/2 ${!showAlert ? "block" : "hidden"}`}
         >Talk with me</motion.span> */}
-        <Image onClick={() => setIsOpen(isOpen => !isOpen)} src="/me.jpeg" width={48} height={48} alt="Me" className={`rounded-full cursor-pointer ${isOpen ? "hidden" : "block"}`} />
+        <Image onClick={() => setIsOpen(true)} src="/me.jpeg" width={48} height={48} alt="Me" className={`rounded-full cursor-pointer ${isOpen ? "hidden" : "block"}`} />
       </motion.div>
       <motion.form
         // ref={chat}
@@ -90,8 +90,8 @@ export default function ChatFloat() {
           setShowChat(true);
           handleSubmit(event);
         }}
-        className={`${showChat ? "block" : "hidden"} bg-[#050816] border rounded-md p-6 max-w-sm`}>
-        <div onClick={() => setIsOpen(isOpen => !isOpen)} className="flex justify-end mb-4 w-full cursor-pointer hover:opacity-75 duration-300">
+        className={`${isOpen ? "block" : "hidden"} bg-[#050816] border rounded-md p-6 max-w-sm`}>
+        <div onClick={() => setIsOpen(false)} className="flex justify-end mb-4 w-full cursor-pointer hover:opacity-75 duration-300">
           <span className="text-2xl">X</span>
         </div>
 
