@@ -169,7 +169,7 @@ export default function ChatFloat() {
             Send
           </button>
         </div> */}
-        <div className="flex items-end justify-between mt-4 gap-3">
+        <div className="flex  items-end justify-between mt-4 gap-3">
           <input
             onChange={handleInputChange}
             type="text"
