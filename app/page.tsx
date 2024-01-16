@@ -18,7 +18,6 @@ export default function Home() {
         <Hero />
       </div>
       <TechCarousel />
-      <Chat />
       {/* <Chat /> */}
       <div className='container mx-auto'>
         <Projects />
