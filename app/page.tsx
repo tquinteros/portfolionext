@@ -18,11 +18,12 @@ export default function Home() {
         <Hero />
       </div>
       <TechCarousel />
+      <Chat />
       {/* <Chat /> */}
       <div className='container mx-auto'>
         <Projects />
       </div>
-      <div className='container mx-auto'> 
+      <div className='container mx-auto'>
         <Contact />
       </div>
       <ChatFloat />
