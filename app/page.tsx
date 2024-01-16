@@ -1,4 +1,6 @@
 // import CvButton from '@/src/components/Cv/Cv'
+import Chat from '@/src/components/Chat/Chat'
+import ChatFloat from '@/src/components/ChatFloat/ChatFloat'
 import Contact from '@/src/components/Contact/Contact'
 import Header from '@/src/components/Header/Header'
 import Hero from '@/src/components/Hero/Hero'
@@ -16,12 +18,14 @@ export default function Home() {
         <Hero />
       </div>
       <TechCarousel />
+      {/* <Chat /> */}
       <div className='container mx-auto'>
         <Projects />
       </div>
       <div className='container mx-auto'> 
         <Contact />
       </div>
+      <ChatFloat />
       {/* <CvButton /> */}
       <ToastContainer />
     </main>

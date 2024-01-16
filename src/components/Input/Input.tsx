@@ -4,7 +4,11 @@ import { InputProps } from '@/types/types';
 const Input = ({ label, type, placeholder, name, value, onChange, required, className }: InputProps) => {
     return (
         <label>
-            {label}
+            {
+                label && (
+                    label
+                )
+            }
             <input
                 type={type}
                 placeholder={placeholder}
