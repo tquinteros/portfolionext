@@ -175,11 +175,13 @@ export default function ChatFloat() {
             type="text"
             placeholder="Type something..."
             value={input}
+            disabled={isLoading}
             autoFocus
             className="mt-0 px-4 bg-[#151030] rounded-md p-2 w-full"
           />
           <button
             type="submit"
+            disabled={isLoading}
             className={`relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-md group`}>
             <span className={`absolute w-0 h-0 transition-all duration-500 ease-out bg-[#9999ff] rounded-full group-hover:w-full group-hover:h-56`}></span>
             <span className="absolute inset-0 w-full h-full -mt-1 rounded-2xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
