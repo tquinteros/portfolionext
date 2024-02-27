@@ -108,15 +108,17 @@ const Contact = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
                     >
                         <Image src="/contact.png" width={600} height={600} className="select-none animate-spin animate-infinite animate-duration-[35000ms]" alt="Contact" />
                     </motion.div>
                 </div>
-                <div className="col-span-12 flex flex-col gap-6 p-6  md:col-span-6">
+                <div className="col-span-12 flex  flex-col gap-6 p-6  md:col-span-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
                         className="flex flex-col gap-2"
                     >
                         <h3 className="green-text-gradient text-6xl font-extrabold">Contact Me!</h3>
@@ -126,6 +128,7 @@ const Contact = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.2 }}
+                        viewport={{ once: true }}
                         onSubmit={handleSubmit} className="flex flex-col gap-4">
                         <Input
                             onChange={(e) => setName(e.target.value)}

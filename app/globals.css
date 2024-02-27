@@ -114,3 +114,10 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: black;
 }
+
+.border-gradient {
+  border-image: linear-gradient(to right, #ff8a00, #e52e71); /* Cambia los colores del gradiente según tu preferencia */
+  border-image-slice: 1;
+  border-width: 2px;
+  border-radius: 8px !important;
+}

@@ -66,8 +66,8 @@ export const Header = () => {
                     <Link href="/" className="flex items-center gap-2 cursor-pointer  hover:opacity-75 duration-300" onClick={() => {
                         window.scrollTo(0, 0)
                     }}>
-                        <Image src='/logo.png' className='object-contain' width={75} height={75} alt="Logo" />
-                        <p className="text-white text-[18px] font-bold hidden sm:block">Tomás Quinteros <span className="md:block hidden">Frontend Developer</span></p>
+                        <Image src='/logo.png' className='object-contain' width={68} height={68} alt="Logo" />
+                        <p className="text-white text-[14px] font-bold hidden sm:block">Tomás Quinteros <span className="md:block hidden">Frontend Developer</span></p>
                     </Link>
                 </motion.div>
                 {

@@ -15,7 +15,7 @@ export const optionsParticles = {
       },
       modes: {
         push: {
-          quantity: 5,
+          quantity: 1,
         },
         repulse: {
           distance: 125,
