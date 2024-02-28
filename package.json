@@ -26,12 +26,12 @@
     "tailwindcss-animated": "^1.0.1"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
+    "@types/node": "^20.11.21",
+    "@types/react": "^18.2.60",
     "@types/react-dom": "latest",
     "@types/react-slick": "^0.23.10",
     "autoprefixer": "latest",
-    "eslint": "latest",
+    "eslint": "^8.57.0",
     "eslint-config-next": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
