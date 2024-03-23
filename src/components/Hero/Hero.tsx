@@ -3,9 +3,6 @@
 import React, { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import { optionsParticles } from "./particleOptions";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import type { Engine } from "tsparticles-engine";
 import Image from "next/image";
 import { TestParticles } from "./TestParticles";
 // import Modal from '../CvModal/CvModal'
