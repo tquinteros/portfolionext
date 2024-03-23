@@ -1,5 +1,17 @@
 import React from 'react'
-import { InputProps } from '@/types/types';
+
+interface InputProps {
+    label?: string;
+    autoFocus?: boolean;
+    type: string;
+    placeholder: string;
+    name?: string;
+    value?: string;
+    required?: boolean;
+    disabled?: boolean;
+    className?: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
 const Input = ({ label, type, placeholder, name, value, onChange, required, className }: InputProps) => {
     return (
