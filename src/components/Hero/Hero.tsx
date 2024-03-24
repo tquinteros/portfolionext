@@ -49,8 +49,7 @@ const Hero = () => {
             </h1>
             <p className="max-w-sm mb-10 text-xl md:max-w-xl md:mx-0 md:mb-16 md:text-xl">
               Experienced web developer with expertise in Next.js, TypeScript,
-              Tailwind CSS, and more. Skilled in building
-              landing pages, and e-commerce, particularly using TiendaNube.
+              Tailwind CSS, and more. With expertise in building responsive web applications, landing pages, and e-commerce platforms particularly using TiendaNube.
             </p>
             <div className="flex md:max-w-xl max-w-sm flex-col md:flex-row gap-4 md:gap-8">
               <button

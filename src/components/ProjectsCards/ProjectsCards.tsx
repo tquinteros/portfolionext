@@ -88,8 +88,8 @@ export const ProjectsCard = ({
             {deploy && (
               <motion.a
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 20 }}
-                transition={{ duration: 0.1 }}
+                animate={{ opacity: isHovered ? 1 : 0 }}
+                transition={{ duration: 0.4 }}
                 className="cursor-pointer bg-gray-500/60 hover:opacity-75 duration-300 p-2 rounded-lg"
                 target="_blank"
                 href={deploy}
@@ -100,10 +100,9 @@ export const ProjectsCard = ({
             {github && (
               <motion.a
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 20 }}
+                animate={{ opacity: isHovered ? 1 : 0 }}
                 transition={{
-                  duration: deploy ? 0.1 : 0,
-                  delay: deploy ? 0.1 : 0,
+                  duration: 0.4,
                 }}
                 className="cursor-pointer bg-gray-500/60 hover:opacity-75 duration-300 p-2 rounded-lg"
                 target="_blank"
