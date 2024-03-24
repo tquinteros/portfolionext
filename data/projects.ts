@@ -29,7 +29,7 @@ export const projects = [
         image: "/landcore.png",
         techs: ["Next.js", "Typescript", "Tailwind CSS"],
         github: "",
-        deploy: "https://undefinedba.com/",
+        deploy: "https://landcoreargentina.com/",
     },
     {
         title: "Fake Ecommerce",
