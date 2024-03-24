@@ -22,7 +22,7 @@ export const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [active, setActive] = useState(false);
 
-  const menuRef = useRef<HTMLUListElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const closeMenuOnOutsideClick = (e: MouseEvent) => {
     if (
@@ -162,7 +162,7 @@ export const Header = () => {
         </motion.div>
         <AnimatePresence>
           {isMobileMenuOpen && (
-            <motion.ul
+            <motion.div
               ref={menuRef}
               initial={{ opacity: 0, y: -300 }}
               animate={{ opacity: 1, y: 0 }}
@@ -171,22 +171,19 @@ export const Header = () => {
                 y: -300,
               }}
               transition={{ duration: 0.5 }}
-              className="md:hidden h-[300px] p-6 overflow-x-hidden absolute top-28 left-0 w-full border bg-[#050816]"
+              className="md:hidden flex flex-col h-[300px] p-6 overflow-x-hidden absolute top-28 left-0 w-full border bg-[#050816]"
             >
               {navLinks.map((link) => (
-                <li
+                <Link
                   key={link.name}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  href={link.href}
                   className="cursor-pointer mb-2 w-full text-xl border-b p-1 px-3 hover:opacity-75 duration-300"
                 >
-                  <Link
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    href={link.href}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
+                  {link.name}
+                </Link>
               ))}
-              <div className="flex h-[80%] justify-center gap-4 items-center">
+              <div className="flex h-full mt-12 justify-center gap-4 items-center">
                 <button
                   onClick={() => setIsModalOpen(true)}
                   className="flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1"
@@ -214,7 +211,7 @@ export const Header = () => {
                   />
                 </a>
               </div>
-            </motion.ul>
+            </motion.div>
           )}
         </AnimatePresence>
       </nav>
