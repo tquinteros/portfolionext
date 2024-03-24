@@ -171,7 +171,7 @@ export const Header = () => {
                 y: -300,
               }}
               transition={{ duration: 0.5 }}
-              className="md:hidden flex flex-col h-[300px] p-6 overflow-x-hidden absolute top-28 left-0 w-full border bg-[#050816]"
+              className="md:hidden flex flex-col h-[300px] p-6 overflow-x-hidden absolute top-[5.7rem] left-0 w-full border bg-[#050816]"
             >
               {navLinks.map((link) => (
                 <Link
