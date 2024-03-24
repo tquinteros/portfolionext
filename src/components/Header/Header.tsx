@@ -149,13 +149,17 @@ export const Header = () => {
         </motion.ul>
         {/* MOBILE */}
         <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0.3 }}
-        className="block md:hidden"
-      >
-        <MenuHamburger onClick={toggleMobileMenu} isActive={isMobileMenuOpen} toggleActive={toggleMobileMenu} />
-      </motion.div>
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.3 }}
+          className="block md:hidden"
+        >
+          <MenuHamburger
+            onClick={toggleMobileMenu}
+            isActive={isMobileMenuOpen}
+            toggleActive={toggleMobileMenu}
+          />
+        </motion.div>
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.ul
@@ -167,16 +171,49 @@ export const Header = () => {
                 y: -300,
               }}
               transition={{ duration: 0.5 }}
-              className="md:hidden overflow-x-hidden absolute top-28 left-0 w-full border bg-[#050816]"
+              className="md:hidden h-[300px] p-6 overflow-x-hidden absolute top-28 left-0 w-full border bg-[#050816]"
             >
               {navLinks.map((link) => (
                 <li
                   key={link.name}
-                  className="cursor-pointer p-1 hover:opacity-75 duration-300"
+                  className="cursor-pointer mb-2 w-full text-xl border-b p-1 px-3 hover:opacity-75 duration-300"
                 >
-                  <Link href={link.href}>{link.name}</Link>
+                  <Link
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    href={link.href}
+                  >
+                    {link.name}
+                  </Link>
                 </li>
               ))}
+              <div className="flex h-[80%] justify-center gap-4 items-center">
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1"
+                >
+                  <ImProfile size={40} />
+                </button>
+                <a
+                  href="https://github.com/tquinteros"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiOutlineGithub
+                    size={40}
+                    className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/tomas-quinteros1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillLinkedin
+                    size={40}
+                    className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300"
+                  />
+                </a>
+              </div>
             </motion.ul>
           )}
         </AnimatePresence>
