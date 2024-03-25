@@ -121,8 +121,8 @@ const Contact = () => {
                         viewport={{ once: true }}
                         className="flex flex-col gap-2"
                     >
-                        <h3 className="green-text-gradient text-6xl font-extrabold">Contact Me!</h3>
-                        <p className="text-xl max-w-md font-bold">Feel free to send an email, your query does not bother.</p>
+                        <h3 className="green-text-gradient text-5xl md:text-6xl font-extrabold">Contact Me!</h3>
+                        <p className="md:text-xl text-lg max-w-md font-bold">Feel free to send an email, your query does not bother.</p>
                     </motion.div>
                     <motion.form
                         initial={{ opacity: 0, y: 20 }}
