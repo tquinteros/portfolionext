@@ -86,7 +86,7 @@ export default function Chat() {
   }
 
   return (
-    <div className="fixed bottom-4 right-4">
+    <div className="fixed bottom-4 z-50 right-4">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -215,7 +215,7 @@ export default function Chat() {
                   )}
                 </div>
               </span>{" "}
-              {m.content}
+              <p className="w-full max-w-full">{m.content}</p>
             </div>
           ))}
         </div>
