@@ -26,9 +26,9 @@ export default function Home() {
 
   return (
     <main className="overflow-x-hidden scroll-smooth">
-      {pageLoaded && <Loader />}
+      {!pageLoaded && <Loader />}
 
-      {!pageLoaded && (
+      {pageLoaded && (
         <>
           <Header />
           <Hero />
