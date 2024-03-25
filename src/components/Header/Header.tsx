@@ -75,7 +75,7 @@ export const Header = () => {
   return (
     <header
       className={`duration-300 fixed w-full top-0 z-[999] ${
-        isTop ? "bg-transparent" : "bg-[#050816] border-b border-white"
+        isTop ? "bg-transparent" : "bg-[#050816]"
       }`}
     >
       <Modal isOpen={isModalOpen} onClose={closeModal}>

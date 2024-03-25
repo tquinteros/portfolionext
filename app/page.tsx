@@ -1,3 +1,4 @@
+import Chat from "@/src/components/Chat/Chat";
 import Contact from "@/src/components/Contact/Contact";
 import { Header } from "@/src/components/Header/Header";
 import Hero from "@/src/components/Hero/Hero";
@@ -15,6 +16,7 @@ export default function Home() {
       <MarqueeTechs />
       <Projects />
       <Contact />
+      <Chat />
       <ToastContainer />
     </main>
   );
