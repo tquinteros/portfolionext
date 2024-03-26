@@ -7,13 +7,15 @@ import {
   OutMode,
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import { loadFull } from "tsparticles";
+
 
 export const TestParticles = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
+      await loadFull(engine);
     }).then(() => {
       setInit(true);
     });
