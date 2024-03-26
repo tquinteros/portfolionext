@@ -1,26 +1,22 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import {
-  type Container,
-  type ISourceOptions,
-  MoveDirection,
-  OutMode,
-} from "@tsparticles/engine";
+import { type Container, type ISourceOptions } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import { loadFull } from "tsparticles";
 
 export const TestParticles = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
+      await loadFull(engine);
     }).then(() => {
       setInit(true);
     });
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
-    // console.log(container);
+    console.log(container);
   };
 
   const options: ISourceOptions = useMemo(
@@ -40,7 +36,6 @@ export const TestParticles = () => {
           onHover: {
             enable: true,
             mode: "repulse",
-            
           },
           resize: {
             enable: true,
@@ -99,15 +94,11 @@ export const TestParticles = () => {
     []
   );
 
-  if (init) {
-    return (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    );
-  }
-
-  return <></>;
+  return (
+    <Particles
+      id="tsparticles"
+      particlesLoaded={particlesLoaded}
+      options={options}
+    />
+  );
 };
