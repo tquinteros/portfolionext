@@ -4,7 +4,7 @@ import { ProjectsCard } from "../ProjectsCards/ProjectsCards";
 
 export const Projects = () => {
   return (
-    <div id="projects">
+    <div id="projects" className="pt-0.5">
       <h1 className="text-6xl text-center mt-32">Projects</h1>
       <p className="text-center mt-8 p-4 mb-4">
         These are a few of the projects I&apos;ve created. If you&apos;d like to see more,
