@@ -10,6 +10,8 @@ import { loadSlim } from "@tsparticles/slim";
 
 export const TestParticles = () => {
   const [init, setInit] = useState(false);
+  const [loadParticles, setLoadParticles] = useState(false);
+
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -21,6 +23,8 @@ export const TestParticles = () => {
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
     // console.log(container);
+    setLoadParticles(true);
+    console.log("Particles loaded")
   };
 
   const options: ISourceOptions = useMemo(
