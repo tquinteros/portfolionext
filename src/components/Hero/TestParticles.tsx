@@ -21,11 +21,11 @@ export const TestParticles = () => {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    // console.log(container);
-    setLoadParticles(true);
-    console.log("Particles loaded")
-  };
+  // const particlesLoaded = async (container?: Container): Promise<void> => {
+  //   // console.log(container);
+  //   setLoadParticles(true);
+  //   console.log("Particles loaded")
+  // };
 
   const options: ISourceOptions = useMemo(
     () => ({
@@ -107,7 +107,6 @@ export const TestParticles = () => {
     return (
       <Particles
         id="tsparticles"
-        particlesLoaded={particlesLoaded}
         options={options}
       />
     );

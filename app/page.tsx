@@ -32,8 +32,8 @@ export default function Home() {
 
   return (
     <main className="overflow-x-hidden scroll-smooth">
-      {!isLoaded && <Loader />}
-      {isLoaded && (
+      {/* {!isLoaded && <Loader />}
+      {isLoaded && ( */}
         <> 
           <Header />
           <Hero />
@@ -43,7 +43,7 @@ export default function Home() {
           <Chat />
           <ToastContainer />
         </>
-      )}
+      {/* )} */}
     </main>
   );
 }
