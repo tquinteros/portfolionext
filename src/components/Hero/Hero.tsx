@@ -2,11 +2,13 @@
 
 import React, { useCallback, useState } from "react";
 import { motion } from "framer-motion";
-import { optionsParticles } from "./particleOptions";
 import Image from "next/image";
-import { TestParticles } from "./TestParticles";
 // import Modal from '../CvModal/CvModal'
 // import ContentModal from '../CvModal/Content'
+import { optionsParticles } from "./particleOptions";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import type { Engine } from "tsparticles-engine";
 
 const Hero = () => {
   const handleDownload = () => {
@@ -16,10 +18,22 @@ const Hero = () => {
     link.click();
   };
 
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async () => {}, []);
+
   return (
     <div className="w-full h-screen z-10" id="hero">
       <div className="absolute w-full -z-50 h-full top-0 left-0">
-        <TestParticles />
+        <Particles
+          className="w-full h-full"
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={optionsParticles}
+        />
       </div>
       <div className="w-full h-full ">
         <div className="container gap-6 grid items-center h-full px-5 mx-auto md:grid-cols-2 md:text-left">
@@ -49,7 +63,9 @@ const Hero = () => {
             </h1>
             <p className="max-w-sm mb-10 text-xl md:max-w-xl md:mx-0 md:mb-16 md:text-xl">
               Experienced web developer with expertise in Next.js, TypeScript,
-              Tailwind CSS, and more. With expertise in building responsive web applications, landing pages, and e-commerce platforms particularly using TiendaNube.
+              Tailwind CSS, and more. With expertise in building responsive web
+              applications, landing pages, and e-commerce platforms particularly
+              using TiendaNube.
             </p>
             <div className="flex md:max-w-xl max-w-sm flex-col md:flex-row gap-4 md:gap-8">
               <button
