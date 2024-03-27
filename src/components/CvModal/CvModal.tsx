@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export interface HomeModalProps {
@@ -15,6 +15,23 @@ const Modal: React.FC<HomeModalProps> = ({ isOpen, onClose, children }) => {
     link.download = "Cv.pdf";
     link.click();
   };
+  const modalRef = useRef<HTMLDivElement | null>(null);
+  const closeModal = (e: MouseEvent) => {
+    if (modalRef.current && e.target instanceof Node && !modalRef.current.contains(e.target)) {
+      onClose();
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("click", closeModal);
+    } else {
+      document.removeEventListener("click", closeModal);
+    }
+    return () => {
+      document.removeEventListener("click", closeModal);
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -27,6 +44,7 @@ const Modal: React.FC<HomeModalProps> = ({ isOpen, onClose, children }) => {
     >
       <div className="modal-overlay fixed inset-0"></div>
       <div
+        ref={modalRef}
         className={`modal no-scrollbar lg:w-[85%] bg-[#050816] w-[100%] border border-[#9999ff] max-h-[80%] lg:max-h-[90%] overflow-auto rounded-lg shadow-lg z-50 `}
       >
         <div className={`sticky top-0 mb-4 px-4 py-2`}>
