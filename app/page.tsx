@@ -8,6 +8,8 @@ import { Analytics } from "@vercel/analytics/react";
 import Image from "next/image";
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 export default function Home() {
   return (
@@ -19,6 +21,7 @@ export default function Home() {
       <Contact />
       <Chat />
       <Analytics />
+      <SpeedInsights />
       <ToastContainer />
     </main>
   );
