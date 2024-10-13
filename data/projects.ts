@@ -1,19 +1,27 @@
 export const projects = [
     {
-        title: "GM Studios",
-        description: "",
-        image: "/gm.png",
-        techs: ["Next.js", "Styled Components", "Material UI"],
-        github: "",
-        deploy: "https://www.gmstudios.gg/",
-    },
-    {
         title: "Decentraland",
         description: "",
         image: "/decentraland.png",
         techs: ["ReactJs", "Styled Components"],
         github: "",
         deploy: "https://artweek-delta.vercel.app/",
+    },
+    {
+        title: "BLK Studio",
+        description: "",
+        image: "/blkstudio.jpg",
+        techs: ["NextJs", "Typescript", "Zod SA", "Tailwind CSS", "MongoDB", "Framer Motion"],
+        github: "",
+        deploy: "https://blkstudio.ar/",
+    },
+    {
+        title: "GM Studios",
+        description: "",
+        image: "/gm.png",
+        techs: ["Next.js", "Styled Components", "Material UI"],
+        github: "",
+        deploy: "https://www.gmstudios.gg/",
     },
     {
         title: "UndefinedBA",

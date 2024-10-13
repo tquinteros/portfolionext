@@ -31,6 +31,7 @@ const Modal: React.FC<HomeModalProps> = ({ isOpen, onClose, children }) => {
     return () => {
       document.removeEventListener("click", closeModal);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -58,16 +59,16 @@ const Modal: React.FC<HomeModalProps> = ({ isOpen, onClose, children }) => {
         <div className={`modal-content p-4 px-4 mt-4 lg:px-12`}>{children}</div>
         <div className="flex gap-4 px-4 lg:px-12 md:gap-12 flex-col md:flex-row items-center mb-8 justify-center">
           <button
-            onClick={handleDownload}
-            className="text-2xl px-6 py-1 rounded-2xl hover:opacity-75 duration-300 border border-[#9999ff] w-full"
-          >
-            Download CV
-          </button>
-          <button
             onClick={onClose}
             className="text-2xl px-6 py-1 rounded-2xl hover:opacity-75 duration-300 border border-[#9999ff] w-full"
           >
             Close
+          </button>
+          <button
+            onClick={handleDownload}
+            className="text-2xl px-6 py-1 rounded-2xl hover:opacity-75 duration-300 border border-[#9999ff] w-full"
+          >
+            Download CV
           </button>
         </div>
       </div>

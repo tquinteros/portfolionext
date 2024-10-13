@@ -27,7 +27,7 @@ const Contact = () => {
             toast.error("Please fill all the fields!", {
                 position: "bottom-right",
                 theme: "dark",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -41,7 +41,7 @@ const Contact = () => {
             toast.error("Please enter a valid email address!", {
                 position: "bottom-right",
                 theme: "dark",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -155,7 +155,7 @@ const Contact = () => {
                                 rows={4}
                                 required={false}
                                 onChange={(e) => setMessage(e.target.value)}
-                                className="border px-4 bg-[#151030] border-black rounded-md p-2 mt-2 w-full"
+                                className="border px-4 bg-[#151030] border-black rounded-md p-2 mt-2 w-full resize-none"
                             />
                         </label>
                         <div className="flex gap-4 justify-center items-center">
