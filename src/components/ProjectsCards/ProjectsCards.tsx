@@ -35,7 +35,7 @@ export const ProjectsCard = ({
   return (
     <div
       onMouseEnter={handleMouseEnter}
-      className="md:col-span-4 mt-4 md:mt-0 relative col-span-12 w-full"
+      className="lg:col-span-4 md:col-span-6 mt-4 md:mt-0 relative col-span-12 w-full"
     >
       <motion.div
         className="relative shadow-card"

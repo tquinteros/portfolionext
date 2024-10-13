@@ -35,10 +35,10 @@ const Hero = () => {
           options={optionsParticles}
         />
       </div>
-      <div className="w-full h-full ">
-        <div className="container gap-6 grid items-center h-full px-5 mx-auto md:grid-cols-2 md:text-left">
+      <div className="w-full h-full">
+        <div className="container gap-6 grid items-center h-full px-5 mx-auto lg:grid-cols-2 lg:text-left">
           <motion.div
-            className="hidden w-auto h-auto mx-auto md:block"
+            className="hidden w-auto h-auto mx-auto lg:block"
             initial={{ opacity: 0, x: -80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}

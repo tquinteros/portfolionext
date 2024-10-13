@@ -103,7 +103,7 @@ const Contact = () => {
     return (
         <div id="contact" className="my-36 container mx-auto">
             <div className="grid grid-cols-12  gap-4">
-                <div className="col-span-12 hidden md:flex md:justify-center md:items-center md:col-span-6">
+                <div className="col-span-12 hidden lg:flex lg:justify-center lg:items-center lg:col-span-6">
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -113,7 +113,7 @@ const Contact = () => {
                         <Image src="/contact.png" width={600} height={600} className="select-none animate-spin animate-infinite animate-duration-[35000ms]" alt="Contact" />
                     </motion.div>
                 </div>
-                <div className="col-span-12 flex flex-col gap-6 p-6  md:col-span-6">
+                <div className="col-span-12 flex flex-col gap-6 p-6 lg:col-span-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -162,19 +162,6 @@ const Contact = () => {
                             <button onClick={handleResetForm} type="reset" className="inline-block text-xl text-white bg-[#151030] px-12 py-3 hover:opacity-75 duration-300 rounded-2xl w-48">
                                 Reset
                             </button>
-                            {/* <button
-                                onClick={handleResetForm}
-                                className="rounded-xl border font-bold text-2xl py-2 px-12"
-                            >
-                                Reset
-                            </button> */}
-                            {/* <button
-                                type="submit"
-                                disabled={loading}
-                                className={`rounded-xl border font-bold text-2xl py-2 px-12 ${loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
-                            >
-                                Send
-                            </button> */}
                             <button type="submit" disabled={loading} className={`${loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"} relative inline-flex items-center justify-center w-48 px-12 py-3 overflow-hidden font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-2xl group`}>
                                 <span className={`absolute w-0 h-0 transition-all duration-500 ease-out ${color} rounded-full group-hover:w-56 group-hover:h-56`}></span>
                                 <span className="absolute inset-0 w-full h-full -mt-1 rounded-2xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
