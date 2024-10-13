@@ -19,10 +19,10 @@ export default function Home() {
       <MarqueeTechs />
       <Projects />
       <Contact />
-      <Chat />
+      {/* <Chat /> */}
       <Analytics />
       <SpeedInsights />
-      <ToastContainer />
+      <ToastContainer position="bottom-right" autoClose={3000} closeOnClick pauseOnHover />
     </main>
   );
 }
