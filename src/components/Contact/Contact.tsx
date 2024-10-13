@@ -14,6 +14,7 @@ const Contact = () => {
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
     const [color, setColor] = useState("bg-green-500");
+    const [progress, setProgress] = useState(0);
 
     const isValidEmail = (email: string) => {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -22,36 +23,31 @@ const Contact = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
         if (!name || !email || !message) {
             setColor("bg-red-500");
-            toast.error("Please fill all the fields!", {
-                position: "bottom-right",
-                theme: "dark",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true
-            });
+            toast.error("Please fill all the fields!");
             return;
         }
 
         if (!isValidEmail(email)) {
             setColor("bg-red-500");
-            toast.error("Please enter a valid email address!", {
-                position: "bottom-right",
-                theme: "dark",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true
-            });
+            toast.error("Please enter a valid email address!");
             return;
         }
 
         setLoading(true);
         setColor("bg-green-500");
+        setProgress(0);
+
+        const interval = setInterval(() => {
+            setProgress((prevProgress) => {
+                if (prevProgress < 90) {
+                    return prevProgress + 10;
+                }
+                return prevProgress;
+            });
+        }, 300);
 
         const body = {
             name: name,
@@ -59,39 +55,31 @@ const Contact = () => {
             message: message,
         };
 
-        const response = await fetch('/api/send', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(body),
-        });
+        try {
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body),
+            });
 
-        if (response.status === 200) {
-            toast.success("Message sent successfully!", {
-                position: "bottom-right",
-                theme: "dark",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true
-            });
-            setName("");
-            setEmail("");
-            setMessage("");
-        } else {
-            toast.error("Error sending email please try again!", {
-                position: "bottom-right",
-                theme: "dark",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true
-            });
+            if (response.status === 200) {
+                toast.success("Message sent successfully!");
+                setName("");
+                setEmail("");
+                setMessage("");
+                setProgress(100);
+            } else {
+                toast.error("Error sending email, please try again!");
+            }
+        } catch (error) {
+            toast.error("Error sending email, please try again!");
+        } finally {
+            clearInterval(interval);
+            setLoading(false);
+            setTimeout(() => setProgress(0), 1000);
         }
-        setLoading(false);
     };
 
     const handleResetForm = () => {
@@ -162,12 +150,23 @@ const Contact = () => {
                             <button onClick={handleResetForm} type="reset" className="inline-block text-xl text-white bg-[#151030] px-12 py-3 hover:opacity-75 duration-300 rounded-2xl w-48">
                                 Reset
                             </button>
-                            <button type="submit" disabled={loading} className={`${loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"} relative inline-flex items-center justify-center w-48 px-12 py-3 overflow-hidden font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-2xl group`}>
-                                <span className={`absolute w-0 h-0 transition-all duration-500 ease-out ${color} rounded-full group-hover:w-56 group-hover:h-56`}></span>
-                                <span className="absolute inset-0 w-full h-full -mt-1 rounded-2xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
-                                <span className="relative">{
-                                    loading ? "Sending..." : "Send"
-                                }</span>
+                            <button
+                                type="submit"
+                                disabled={loading}
+                                className={`${loading && 'opacity-75 cursor-not-allowed'} relative inline-flex items-center justify-center w-48 px-12 py-3 overflow-hidden font-medium text-xl tracking-tighter text-white bg-[#151030] rounded-2xl`}
+                            >
+                                <span
+                                    className="absolute left-0 top-0 h-full bg-green-500 transition-all duration-300 ease-out"
+                                    style={{ width: `${progress}%` }}
+                                ></span>
+
+                                <span className="relative z-10">
+                                    {loading ? (
+                                        <div className="h-full w-full flex justify-center items-center py-1.5">
+                                            <div className="animate-spin rounded-full h-4 w-4 border-t-2 border-b-2 border-primary" />
+                                        </div>
+                                    ) : "Send"}
+                                </span>
                             </button>
                         </div>
                     </motion.form>
