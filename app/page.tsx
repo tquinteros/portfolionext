@@ -22,7 +22,7 @@ export default function Home() {
       {/* <Chat /> */}
       <Analytics />
       <SpeedInsights />
-      <ToastContainer position="bottom-right" autoClose={3000} closeOnClick pauseOnHover />
+      <ToastContainer position="bottom-right" autoClose={3000} closeOnClick pauseOnHover theme="dark" />
     </main>
   );
 }
