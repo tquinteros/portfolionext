@@ -31,7 +31,7 @@ const RightSide = () => {
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-4">
             <a
-              href="https://www.blkstudio.ar"
+              href="https://www.blkmarket.ar"
               target="_blank"
               className="text-xl font-bold hover:opacity-75 duration-300"
             >
@@ -49,7 +49,7 @@ const RightSide = () => {
               >
                 Full Stack Developer
               </h5>
-              <a href="https://www.blkstudio.ar" className="text-md font-bold hover:opacity-75 duration-300" target="_blank">
+              <a href="https://www.blkmarket.ar" className="text-md font-bold hover:opacity-75 duration-300" target="_blank">
                 BLK Market &nbsp; | &nbsp; Full time
               </a>
               <h3 className="text-md font-bold">

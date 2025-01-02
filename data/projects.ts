@@ -1,5 +1,13 @@
 export const projects = [
     {
+        title: "BLK Studio",
+        description: "",
+        image: "/blkweb.png",
+        techs: ["NextJs", "Typescript", "Zod SA","React Query" , "MongoDB", "Tailwind CSS"],
+        github: "",
+        deploy: "https://blkmarket.ar/",
+    },
+    {
         title: "Decentraland",
         description: "",
         image: "/decentraland.png",

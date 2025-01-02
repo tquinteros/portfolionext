@@ -84,7 +84,7 @@ export const ProjectsCard = ({
               ))}
             </div>
           </div>
-          <div className="opacity-0 gap-8 bg-opacity-30 top-0 right-0 absolute flex px-6 py-4 duration-300 group-hover:opacity-100">
+          <div className="opacity-0 gap-8 bg-opacity-30 -top-2 right-0 absolute flex px-6 py-4 duration-300 group-hover:opacity-100">
             {deploy && (
               <motion.a
                 initial={{ opacity: 0, y: 20 }}
