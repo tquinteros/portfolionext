@@ -2,16 +2,14 @@ import React from "react";
 
 const EducationAndCertifications: React.FC = () => {
   const education = {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "University of California, Berkeley",
-    period: "2014 - 2018",
-    gpa: "GPA: 3.8/4.0"
+    degree: "Tecnicatura Universitaria en Programación",
+    institution: "Universidad Tecnológica Nacional",
+    period: "2021 - 2022 (Not completed)",
   };
 
   const certifications = [
-    { name: "AWS Certified Developer", year: "2023" },
-    { name: "Google Cloud Professional", year: "2022" },
-    { name: "React Developer Certification", year: "2021" }
+    { name: "React Developer Certification", year: "2022" },
+    { name: "Javascript Developer", year: "2022" }, 
   ];
 
   return (
@@ -24,7 +22,7 @@ const EducationAndCertifications: React.FC = () => {
           <div>
             <h3 className="font-bold text-white">{education.degree}</h3>
             <p className="text-custom-teal">{education.institution}</p>
-            <p className="text-gray-400 text-sm">{education.period} | {education.gpa}</p>
+            <p className="text-gray-400 text-sm">{education.period}</p>
           </div>
         </div>
       </div>

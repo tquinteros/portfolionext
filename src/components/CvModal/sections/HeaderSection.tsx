@@ -1,9 +1,13 @@
 import React from "react";
 import { Phone, MapPin, Github, Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
 
 const HeaderSection: React.FC = () => {
   return (
     <div className="text-center border-b border-custom-teal/30 pb-6">
+      <div className="flex justify-center items-center mb-4">
+        <Image src="/me.jpeg" alt="Tomás Quinteros" width={164} height={164} className="rounded-full" />
+      </div>
       <h1 className="text-3xl font-bold green-text-gradient mb-2">Tomás Quinteros</h1>
       <p className="text-xl text-custom-green mb-4">Frontend Developer</p>
       <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-300">

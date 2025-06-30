@@ -5,16 +5,10 @@ import React, { useState, useRef, useEffect } from "react";
 import { MenuHamburger } from "./AnimatedHamburgerButton";
 import Link from "next/link";
 import { navLinks } from "@/data/navLinks";
-import {
-  AiOutlineMenu,
-  AiOutlineClose,
-  AiOutlineGithub,
-  AiFillLinkedin,
-  AiOutlineDownload,
-} from "react-icons/ai";
 import { ImProfile } from "react-icons/im";
 import CvDialog from "../CvModal/CvDialog";
 import { useModal } from "@/src/contexts/ModalContext";
+import { Github, Linkedin, FileUser } from "lucide-react";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -70,9 +64,8 @@ export const Header = () => {
 
   return (
     <header
-      className={`duration-300 fixed w-full top-0 z-[50] ${
-        isTop ? "bg-transparent" : "bg-[#050816]"
-      }`}
+      className={`duration-300 fixed w-full top-0 z-[50] ${isTop ? "bg-transparent" : "bg-[#050816]"
+        }`}
     >
       <CvDialog />
       <nav className="flex px-4 md:px-0 py-2 container items-center mx-auto justify-between">
@@ -115,28 +108,30 @@ export const Header = () => {
           <div className="flex gap-4 items-center">
             <button
               onClick={openModal}
-              className="flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1"
+              className="flex items-center gap-2 font-bold duration-300 rounded-2xl py-1 text-gray-400 hover:text-custom-green transition-colors"
             >
-              <ImProfile size={40} />
+              <FileUser size={32} />
             </button>
             <a
               href="https://github.com/tquinteros"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-gray-400 hover:text-custom-green transition-colors"
             >
-              <AiOutlineGithub
-                size={40}
-                className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300"
+              <Github
+                size={32}
+
               />
             </a>
             <a
               href="https://www.linkedin.com/in/tomas-quinteros1/"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-gray-400 hover:text-custom-green transition-colors"
             >
-              <AiFillLinkedin
-                size={40}
-                className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300"
+              <Linkedin
+                size={32}
+
               />
             </a>
           </div>
@@ -182,26 +177,27 @@ export const Header = () => {
                   onClick={openModal}
                   className="flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1"
                 >
-                  <ImProfile size={40} />
+                  <FileUser />
                 </button>
                 <a
                   href="https://github.com/tquinteros"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-custom-green transition-colors"
                 >
-                  <AiOutlineGithub
-                    size={40}
-                    className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300"
+                  <Github
+
                   />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/tomas-quinteros1/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-custom-green transition-colors"
                 >
-                  <AiFillLinkedin
-                    size={40}
-                    className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300"
+                  <Linkedin
+
+
                   />
                 </a>
               </div>

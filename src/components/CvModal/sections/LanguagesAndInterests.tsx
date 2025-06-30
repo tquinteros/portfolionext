@@ -3,16 +3,14 @@ import { Badge } from "@/components/ui/badge";
 
 const LanguagesAndInterests: React.FC = () => {
   const languages = [
-    { name: "English", level: "Native" },
-    { name: "Spanish", level: "Fluent" },
-    { name: "French", level: "Intermediate" }
+    { name: "Spanish", level: "Native" },
+    { name: "English", level: "Advanced" },
   ];
 
   const interests = [
-    "Open Source",
-    "AI/ML",
-    "Photography",
-    "Travel"
+    "Web3",
+    "Blockchain",
+    "AI",
   ];
 
   return (
@@ -37,9 +35,9 @@ const LanguagesAndInterests: React.FC = () => {
         </h2>
         <div className="flex flex-wrap gap-2">
           {interests.map((interest, index) => (
-            <Badge 
+            <Badge
               key={index}
-              variant="outline" 
+              variant="outline"
               className="border-custom-teal text-custom-green"
             >
               {interest}
