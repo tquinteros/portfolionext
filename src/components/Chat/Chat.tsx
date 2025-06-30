@@ -2,7 +2,7 @@
 
 import {
   Message,
-  experimental_useAssistant as useAssistant,
+  useAssistant,
   useChat,
 } from "ai/react";
 import { useEffect, useRef, useState, RefObject } from "react";

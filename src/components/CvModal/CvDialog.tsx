@@ -118,22 +118,22 @@ const CvDialog: React.FC = () => {
                             <div className="border-l-2 border-gray-600 pl-4">
                                 <div className="flex justify-between items-start mb-2">
                                     <div>
-                                        <h3 className="font-bold text-white">Senior Frontend Developer</h3>
-                                        <p className="text-custom-teal">TechCorp Solutions</p>
+                                        <h3 className="font-bold text-white">Full Stack Developer</h3>
+                                        <p className="text-custom-teal">BLKMarket</p>
                                     </div>
                                     <div className="text-right text-sm text-gray-400">
                                         <div className="flex items-center gap-1">
                                             <Calendar className="h-3 w-3" />
-                                            Jan 2022 - Present
+                                            Feb 2023 - Present
                                         </div>
-                                        <div>San Francisco, CA</div>
+                                        <div>Remote</div>
                                     </div>
                                 </div>
                                 <ul className="text-gray-300 text-sm space-y-1 list-disc list-inside">
-                                    <li>Led development of React-based dashboard increasing user engagement by 45%</li>
-                                    <li>Implemented micro-frontend architecture reducing deployment time by 50%</li>
-                                    <li>Mentored 4 junior developers and established code review best practices</li>
-                                    <li>Optimized application performance achieving 95+ Lighthouse scores</li>
+                                    <li>Developed and maintained scalable web applications using React, Next.js, and TypeScript</li>
+                                    <li>Collaborated with cross-functional teams to implement new features and improve user experience</li>
+                                    <li>Optimized application performance and implemented best practices for accessibility and SEO</li>
+                                    <li>Worked on a variety of projects, including e-commerce platforms, admin dashboards, and user management tools</li>
                                 </ul>
                             </div>
 
@@ -148,7 +148,7 @@ const CvDialog: React.FC = () => {
                                             <Calendar className="h-3 w-3" />
                                             Feb 2022 - Present
                                         </div>
-                                        <div>Remote</div>
+                                        <div>Remote (Part time)</div>
                                     </div>
                                 </div>
                                 <ul className="text-gray-300 text-sm space-y-1 list-disc list-inside">
