@@ -1,9 +1,9 @@
 export const projects = [
     {
-        title: "BLK Studio",
+        title: "BLK Market",
         description: "",
         image: "/blkweb.png",
-        techs: ["NextJs", "Typescript", "Zod SA","React Query" , "MongoDB", "Tailwind CSS"],
+        techs: ["NextJs", "Typescript", "ZSA","React Query" , "MongoDB", "Tailwind CSS"],
         github: "",
         deploy: "https://blkmarket.ar/",
     },
@@ -19,7 +19,7 @@ export const projects = [
         title: "BLK Studio",
         description: "",
         image: "/blkstudio.jpg",
-        techs: ["NextJs", "Typescript", "Zod SA", "Tailwind CSS", "MongoDB", "Framer Motion"],
+        techs: ["NextJs", "Typescript", "ZSA", "Tailwind CSS", "MongoDB", "Framer Motion"],
         github: "",
         deploy: "https://blkstudio.ar/",
     },
@@ -39,14 +39,14 @@ export const projects = [
         github: "",
         deploy: "https://undefinedba.com/",
     },
-    {
-        title: "LandCore",
-        description: "",
-        image: "/landcore.png",
-        techs: ["Next.js", "Typescript", "Tailwind CSS"],
-        github: "",
-        deploy: "https://landcoreargentina.com/",
-    },
+    // {
+    //     title: "LandCore",
+    //     description: "",
+    //     image: "/landcore.png",
+    //     techs: ["Next.js", "Typescript", "Tailwind CSS"],
+    //     github: "",
+    //     deploy: "https://landcoreargentina.com/",
+    // },
     {
         title: "Fake Ecommerce",
         description: "",

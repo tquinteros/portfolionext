@@ -13,14 +13,14 @@ import {
   AiOutlineDownload,
 } from "react-icons/ai";
 import { ImProfile } from "react-icons/im";
-import Modal from "../CvModal/CvModal";
-import ContentModal from "../CvModal/Content";
+import CvDialog from "../CvModal/CvDialog";
+import { useModal } from "@/src/contexts/ModalContext";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [active, setActive] = useState(false);
+  const { openModal } = useModal();
 
   const menuRef = useRef<HTMLDivElement | null>(null);
 
@@ -68,19 +68,13 @@ export const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <header
-      className={`duration-300 fixed w-full top-0 z-[999] ${
+      className={`duration-300 fixed w-full top-0 z-[50] ${
         isTop ? "bg-transparent" : "bg-[#050816]"
       }`}
     >
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <ContentModal />
-      </Modal>
+      <CvDialog />
       <nav className="flex px-4 md:px-0 py-2 container items-center mx-auto justify-between">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
@@ -120,7 +114,7 @@ export const Header = () => {
           ))}
           <div className="flex gap-4 items-center">
             <button
-              onClick={() => setIsModalOpen(true)}
+              onClick={openModal}
               className="flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1"
             >
               <ImProfile size={40} />
@@ -185,7 +179,7 @@ export const Header = () => {
               ))}
               <div className="flex h-full mt-12 justify-center gap-4 items-center">
                 <button
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={openModal}
                   className="flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1"
                 >
                   <ImProfile size={40} />

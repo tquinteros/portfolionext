@@ -98,7 +98,7 @@ const Contact = () => {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <Image src="/contact.png" width={600} height={600} className="select-none animate-spin animate-infinite animate-duration-[35000ms]" alt="Contact" />
+                        <Image src="/contact.png" width={600} height={600} className="select-none" alt="Contact" />
                     </motion.div>
                 </div>
                 <div className="col-span-12 flex flex-col gap-6 p-6 lg:col-span-6">
