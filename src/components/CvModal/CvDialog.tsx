@@ -9,7 +9,7 @@ import {
 import ContentModal from "./Content";
 import { useModal } from "@/src/contexts/ModalContext";
 import { Button } from "@/components/ui/button";
-import { Download, Phone, MapPin, Github, Linkedin, Mail } from "lucide-react";
+import { Download, Phone, MapPin, Github, Linkedin, Mail, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const CvDialog: React.FC = () => {
@@ -89,11 +89,16 @@ const CvDialog: React.FC = () => {
                                     <Badge className="bg-custom-teal/20 text-custom-green border-custom-teal/50">React</Badge>
                                     <Badge className="bg-custom-teal/20 text-custom-green border-custom-teal/50">Next.js</Badge>
                                     <Badge className="bg-custom-teal/20 text-custom-green border-custom-teal/50">TypeScript</Badge>
-                                    <Badge className="bg-custom-teal/20 text-custom-green border-custom-teal/50">Vue.js</Badge>
                                     <Badge className="bg-custom-teal/20 text-custom-green border-custom-teal/50">Tailwind CSS</Badge>
+                                    <Badge className="bg-custom-teal/20 text-custom-green border-custom-teal/50">Tanstack Query</Badge>
+                                    <Badge className="bg-custom-teal/20 text-custom-green border-custom-teal/50">MongoDB</Badge>
+                                    <Badge className="bg-custom-teal/20 text-custom-green border-custom-teal/50">Zustand</Badge>
+                                    <Badge className="bg-custom-teal/20 text-custom-green border-custom-teal/50">Zod Server Actions</Badge>
+                                    <Badge className="bg-custom-teal/20 text-custom-green border-custom-teal/50">Framer Motion</Badge>
+                                    <Badge className="bg-custom-teal/20 text-custom-green border-custom-teal/50">Material UI</Badge>
                                 </div>
                             </div>
-                            <div>
+                            {/* <div>
                                 <h3 className="font-semibold text-custom-teal mb-2">Tools & Platforms</h3>
                                 <div className="flex flex-wrap gap-2">
                                     <Badge className="bg-custom-green/20 text-custom-teal border-custom-green/50">Git</Badge>
@@ -102,6 +107,56 @@ const CvDialog: React.FC = () => {
                                     <Badge className="bg-custom-green/20 text-custom-teal border-custom-green/50">Vercel</Badge>
                                     <Badge className="bg-custom-green/20 text-custom-teal border-custom-green/50">Figma</Badge>
                                 </div>
+                            </div> */}
+                        </div>
+                    </div>
+                    <div>
+                        <h2 className="text-xl font-bold text-custom-green mb-3 border-l-4 border-custom-green pl-3">
+                            Professional Experience
+                        </h2>
+                        <div className="space-y-6">
+                            <div className="border-l-2 border-gray-600 pl-4">
+                                <div className="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h3 className="font-bold text-white">Senior Frontend Developer</h3>
+                                        <p className="text-custom-teal">TechCorp Solutions</p>
+                                    </div>
+                                    <div className="text-right text-sm text-gray-400">
+                                        <div className="flex items-center gap-1">
+                                            <Calendar className="h-3 w-3" />
+                                            Jan 2022 - Present
+                                        </div>
+                                        <div>San Francisco, CA</div>
+                                    </div>
+                                </div>
+                                <ul className="text-gray-300 text-sm space-y-1 list-disc list-inside">
+                                    <li>Led development of React-based dashboard increasing user engagement by 45%</li>
+                                    <li>Implemented micro-frontend architecture reducing deployment time by 50%</li>
+                                    <li>Mentored 4 junior developers and established code review best practices</li>
+                                    <li>Optimized application performance achieving 95+ Lighthouse scores</li>
+                                </ul>
+                            </div>
+
+                            <div className="border-l-2 border-gray-600 pl-4">
+                                <div className="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h3 className="font-bold text-white">Frontend Developer</h3>
+                                        <p className="text-custom-teal">Zetaequis</p>
+                                    </div>
+                                    <div className="text-right text-sm text-gray-400">
+                                        <div className="flex items-center gap-1">
+                                            <Calendar className="h-3 w-3" />
+                                            Feb 2022 - Present
+                                        </div>
+                                        <div>Remote</div>
+                                    </div>
+                                </div>
+                                <ul className="text-gray-300 text-sm space-y-1 list-disc list-inside">
+                                    <li>Developed and maintained scalable web applications using React, Next.js, and TypeScript</li>
+                                    <li>Collaborated with cross-functional teams to implement new features and improve user experience</li>
+                                    <li>Optimized application performance and implemented best practices for accessibility and SEO</li>
+                                    <li>Worked on a variety of projects, including e-commerce platforms, admin dashboards, and user management tools</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
