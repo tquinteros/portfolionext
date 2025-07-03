@@ -6,15 +6,13 @@ import { MarqueeTechs } from "@/src/components/MarqueeTechs/MarqueeTechs";
 import { Projects } from "@/src/components/Projects/Projects";
 import { Analytics } from "@vercel/analytics/react";
 import Image from "next/image";
-import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-
+import { Toaster } from "@/components/ui/sonner"
 
 export default function Home() {
   return (
     <main className="overflow-x-hidden scroll-smooth">
-      <Header />
       <Hero />
       <MarqueeTechs />
       <Projects />
@@ -22,7 +20,6 @@ export default function Home() {
       {/* <Chat /> */}
       <Analytics />
       <SpeedInsights />
-      <ToastContainer position="bottom-right" autoClose={3000} closeOnClick pauseOnHover theme="dark" />
     </main>
   );
 }

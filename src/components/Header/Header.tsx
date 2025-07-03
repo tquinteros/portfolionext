@@ -5,22 +5,16 @@ import React, { useState, useRef, useEffect } from "react";
 import { MenuHamburger } from "./AnimatedHamburgerButton";
 import Link from "next/link";
 import { navLinks } from "@/data/navLinks";
-import {
-  AiOutlineMenu,
-  AiOutlineClose,
-  AiOutlineGithub,
-  AiFillLinkedin,
-  AiOutlineDownload,
-} from "react-icons/ai";
 import { ImProfile } from "react-icons/im";
-import Modal from "../CvModal/CvModal";
-import ContentModal from "../CvModal/Content";
+import CvDialog from "../CvModal/CvDialog";
+import { useModal } from "@/src/contexts/ModalContext";
+import { Github, Linkedin, FileUser } from "lucide-react";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [active, setActive] = useState(false);
+  const { openModal } = useModal();
 
   const menuRef = useRef<HTMLDivElement | null>(null);
 
@@ -68,24 +62,17 @@ export const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <header
-      className={`duration-300 fixed w-full top-0 z-[999] ${
-        isTop ? "bg-transparent" : "bg-[#050816]"
-      }`}
+      className={`duration-300 fixed w-full top-0 z-[50] ${isTop ? "bg-transparent" : "bg-[#050816]"
+        }`}
     >
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <ContentModal />
-      </Modal>
-      <nav className="flex px-4 md:px-0 py-2 container items-center mx-auto justify-between">
+      <CvDialog />
+      <nav className="flex px-4 lg:px-0 py-2 container items-center mx-auto justify-between">
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.3 }}
+          // initial={{ opacity: 0, y: -100 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ duration: 1.2, delay: 0.3 }}
         >
           <Link
             href="#hero"
@@ -105,9 +92,9 @@ export const Header = () => {
           </Link>
         </motion.div>
         <motion.ul
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.3 }}
+          // initial={{ opacity: 0, y: -100 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ duration: 1.2, delay: 0.3 }}
           className="md:gap-6 xl:gap-10 hidden md:items-center md:flex"
         >
           {navLinks.map((link) => (
@@ -120,29 +107,31 @@ export const Header = () => {
           ))}
           <div className="flex gap-4 items-center">
             <button
-              onClick={() => setIsModalOpen(true)}
-              className="flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1"
+              onClick={openModal}
+              className="flex items-center gap-2 font-bold duration-300 rounded-2xl py-1 text-gray-400 hover:text-custom-green transition-colors"
             >
-              <ImProfile size={40} />
+              <FileUser size={32} />
             </button>
             <a
               href="https://github.com/tquinteros"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-gray-400 hover:text-custom-green transition-colors"
             >
-              <AiOutlineGithub
-                size={40}
-                className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300"
+              <Github
+                size={32}
+
               />
             </a>
             <a
               href="https://www.linkedin.com/in/tomas-quinteros1/"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-gray-400 hover:text-custom-green transition-colors"
             >
-              <AiFillLinkedin
-                size={40}
-                className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300"
+              <Linkedin
+                size={32}
+
               />
             </a>
           </div>
@@ -185,29 +174,30 @@ export const Header = () => {
               ))}
               <div className="flex h-full mt-12 justify-center gap-4 items-center">
                 <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1"
+                  onClick={openModal}
+                  className="flex items-center gap-2 text-gray-400 font-bold hover:opacity-75 duration-300 rounded-2xl py-1"
                 >
-                  <ImProfile size={40} />
+                  <FileUser />
                 </button>
                 <a
                   href="https://github.com/tquinteros"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-custom-green transition-colors"
                 >
-                  <AiOutlineGithub
-                    size={40}
-                    className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300"
+                  <Github
+
                   />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/tomas-quinteros1/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-custom-green transition-colors"
                 >
-                  <AiFillLinkedin
-                    size={40}
-                    className="text-white cursor-pointer font-bold relative hover:opacity-75 duration-300"
+                  <Linkedin
+
+
                   />
                 </a>
               </div>
