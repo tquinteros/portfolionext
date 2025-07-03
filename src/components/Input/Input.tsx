@@ -13,7 +13,7 @@ interface InputProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input = ({ label, type, placeholder, name, value, onChange, required, className }: InputProps) => {
+const InputMe = ({ label, type, placeholder, name, value, onChange, required, className }: InputProps) => {
     return (
         <label>
             {
@@ -34,4 +34,4 @@ const Input = ({ label, type, placeholder, name, value, onChange, required, clas
     )
 }
 
-export default Input;
+export default InputMe;

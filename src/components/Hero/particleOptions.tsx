@@ -26,7 +26,7 @@ export const optionsParticles = {
   },
   particles: {
     color: {
-      value: "#9999ff",
+      value: ["#11998e", "#38ef7d"],
     },
     // links: {
     //   color: "#9999ff",
