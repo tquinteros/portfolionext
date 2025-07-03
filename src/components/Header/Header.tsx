@@ -68,7 +68,7 @@ export const Header = () => {
         }`}
     >
       <CvDialog />
-      <nav className="flex px-4 md:px-0 py-2 container items-center mx-auto justify-between">
+      <nav className="flex px-4 lg:px-0 py-2 container items-center mx-auto justify-between">
         <motion.div
           // initial={{ opacity: 0, y: -100 }}
           // animate={{ opacity: 1, y: 0 }}
@@ -175,7 +175,7 @@ export const Header = () => {
               <div className="flex h-full mt-12 justify-center gap-4 items-center">
                 <button
                   onClick={openModal}
-                  className="flex items-center gap-2 font-bold hover:opacity-75 duration-300 rounded-2xl py-1"
+                  className="flex items-center gap-2 text-gray-400 font-bold hover:opacity-75 duration-300 rounded-2xl py-1"
                 >
                   <FileUser />
                 </button>
