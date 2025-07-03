@@ -8,7 +8,7 @@ export const projects = [
         deploy: "https://blkmarket.ar/",
     },
     {
-        title: "BLKMarket (Android)",
+        title: "BLKMarket (Android App)",
         description: "",
         image: "/blkweb.png",
         techs: ["React Native", "Typescript", "Axios", "TanStack Query", "Expo", "Styled Components"],
