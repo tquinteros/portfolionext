@@ -1,9 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useState } from "react";
-import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
-import TechBadge from "../TechBadge/TechBadge";
+import React from "react";
+import Link from "next/link";
+import { ExternalLink, Github, Info } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 type ProjectsCardProps = {
   title: string;
@@ -12,6 +19,8 @@ type ProjectsCardProps = {
   techs: string[];
   github?: string;
   deploy: string;
+  hasInfo?: boolean;
+  infoText?: string;
 };
 
 export const ProjectsCard = ({
@@ -21,99 +30,71 @@ export const ProjectsCard = ({
   techs,
   deploy,
   github,
+  hasInfo = false,
+  infoText,
 }: ProjectsCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [animationCompleted, setAnimationCompleted] = useState(false);
-
-  const handleMouseEnter = () => {
-    if (!animationCompleted) {
-      setIsHovered(true);
-      setAnimationCompleted(true);
-    }
-  };
-
   return (
-    <div
-      onMouseEnter={handleMouseEnter}
-      className="lg:col-span-4 md:col-span-6 mt-4 md:mt-0 relative col-span-12 w-full"
+    <motion.div
+      className="group relative overflow-hidden rounded-lg bg-slate-900/30 border border-slate-700/50 hover:border-custom-green/50 transition-all duration-300"
+      initial={{ y: 0 }}
+      transition={{ duration: 0.3 }}
     >
-      <motion.div
-        className="relative shadow-card"
-        initial={{ y: 0 }}
-        whileHover={{ y: -10 }}
-        transition={{ duration: 0.3 }}
-      >
-        <div className="group">
-          <Image
-            src={image}
-            alt={title}
-            width={500}
-            height={300}
-            className="object-cover w-full rounded-lg h-[330px]"
-          />
-          <div className="opacity-0 bg-black bg-opacity-60 absolute inset-0 flex flex-col justify-end px-6 py-4 duration-300 group-hover:opacity-100">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 20 }}
-              transition={{ duration: 0.3 }}
-              style={{
-                textShadow:
-                  "-1px -1px 0 #3f3f3f, " +
-                  "-1px 0 0 #3f3f3f, " +
-                  "-1px 1px 0 #3f3f3f, " +
-                  "0 -1px 0 #3f3f3f, " +
-                  "0 0 0 #3f3f3f, " +
-                  "0 1px 0 #3f3f3f, " +
-                  "1px -1px 0 #3f3f3f, " +
-                  "1px 0 0 #3f3f3f, " +
-                  "1px 1px 0 #3f3f3f",
-              }}
-              className="text-2xl font-bold text-white"
-            >
-              {title}
-            </motion.h1>
-            <p className="text-white">{description}</p>
-            <div className="flex flex-wrap gap-2 mt-2">
-              {techs?.map((tech, index) => (
-                <TechBadge
-                  isHovered={isHovered}
-                  index={index}
-                  key={index}
-                  label={tech}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="opacity-0 gap-8 bg-opacity-30 -top-2 right-0 absolute flex px-6 py-4 duration-300 group-hover:opacity-100">
-            {deploy && (
-              <motion.a
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isHovered ? 1 : 0 }}
-                transition={{ duration: 0.4 }}
-                className="cursor-pointer bg-gray-500/60 hover:opacity-75 duration-300 p-2 rounded-lg"
-                target="_blank"
-                href={deploy}
-              >
-                <AiOutlineLink size={40} />
-              </motion.a>
-            )}
+      <div className="aspect-[4/3] overflow-hidden">
+        <Image
+          src={image || "/placeholder.svg"}
+          width={400}
+          height={300}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+      <div className="p-4 space-y-3">
+        <div className="flex items-start justify-between">
+          <h3 className="text-xl font-bold text-white">{title}</h3>
+          <div className="flex gap-2 ml-2">
             {github && (
-              <motion.a
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isHovered ? 1 : 0 }}
-                transition={{
-                  duration: 0.4,
-                }}
-                className="cursor-pointer bg-gray-500/60 hover:opacity-75 duration-300 p-2 rounded-lg"
-                target="_blank"
+              <Link
                 href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-custom-green transition-colors"
               >
-                <AiOutlineGithub size={40} />
-              </motion.a>
+                <Github className="h-4 w-4" />
+              </Link>
+            )}
+            {deploy && (
+              <Link
+                href={deploy}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-custom-green transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+              </Link>
+            )}
+            {hasInfo && (
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Info className="h-4 w-4 text-gray-400 hover:text-custom-green transition-colors" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{infoText}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             )}
           </div>
         </div>
-      </motion.div>
-    </div>
+        {description && <p className="text-sm text-gray-400 line-clamp-2">{description}</p>}
+        <div className="flex flex-wrap gap-2">
+          {techs?.map((tech) => (
+            <Badge key={tech} className="bg-custom-teal/20 text-custom-green border-custom-teal/50">
+              {tech}
+            </Badge>
+          ))}
+        </div>
+      </div>
+    </motion.div>
   );
 };

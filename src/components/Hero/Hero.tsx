@@ -65,7 +65,7 @@ const Hero = () => {
                 <br />
                 <span className="green-text-gradient">Web Interfaces</span>
               </h1>
-              <p className="mx-auto mt-1 max-w-[700px] text-gray-300 text-center md:text-xl">
+              <p className="mx-auto mt-0 max-w-[700px] text-gray-300 text-center md:text-xl">
                 I craft responsive and performant web applications using TypeScript,
                 React, and modern libraries like Next.js and React Query—along with a broader set of
                 tools adapted to each project’s needs.
