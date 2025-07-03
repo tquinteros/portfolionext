@@ -15,22 +15,32 @@ const HeaderSection: React.FC = () => {
           <Mail className="h-4 w-4 text-custom-green" />
           tomyquinteros494@gmail.com
         </div>
-        <div className="flex items-center gap-1">
+        {/* <div className="flex items-center gap-1">
           <Phone className="h-4 w-4 text-custom-green" />
           +54 9 11 3333-3333
-        </div>
+        </div> */}
         <div className="flex items-center gap-1">
           <MapPin className="h-4 w-4 text-custom-green" />
           Córdoba, Argentina
         </div>
-        <div className="flex items-center gap-1">
+        <a 
+          href="https://github.com/tquinteros" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 hover:text-custom-green transition-colors"
+        >
           <Github className="h-4 w-4 text-custom-green" />
           github.com/tquinteros
-        </div>
-        <div className="flex items-center gap-1">
+        </a>
+        <a 
+          href="https://linkedin.com/in/tomas-quinteros1" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 hover:text-custom-green transition-colors"
+        >
           <Linkedin className="h-4 w-4 text-custom-green" />
           linkedin.com/in/tomas-quinteros1
-        </div>
+        </a>
       </div>
     </div>
   );
