@@ -49,7 +49,7 @@ export const ProjectsCard = ({
         />
       </div>
       <div className="p-4 space-y-3">
-        <div className="flex items-start justify-between">
+        <div className="flex items-center justify-between">
           <h3 className="text-xl font-bold text-white">{title}</h3>
           <div className="flex gap-2 ml-2">
             {github && (
