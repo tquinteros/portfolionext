@@ -46,7 +46,7 @@ const CvDialog: React.FC = () => {
                         </Button>
                     </DialogTitle>
                 </DialogHeader>
-                <div className="space-y-6 p-6">
+                <div className="space-y-6 md:p-6 p-2">
                     <HeaderSection />
                     <ProfessionalSummary />
                     <TechnicalSkills />
