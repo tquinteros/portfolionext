@@ -21,7 +21,7 @@ export const projects = [
         title: "Decentraland",
         description: "",
         image: "/decentraland.png",
-        techs: ["ReactJs", "Styled Components"],
+        techs: ["React", "Styled Components"],
         github: "",
         deploy: "https://artweek-delta.vercel.app/",
     },
