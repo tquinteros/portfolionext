@@ -135,7 +135,7 @@ const RightSide = () => {
             <div className="flex flex-col gap-1">
               <h3 className="text-xl font-bold">CoderHouse</h3>
               <h3 className="text-md font-bold">
-                2022 &nbsp; | &nbsp; ReactJs
+                2022 &nbsp; | &nbsp; React
               </h3>
             </div>
           </div>

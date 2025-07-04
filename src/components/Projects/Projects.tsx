@@ -1,10 +1,12 @@
 import { projects } from "@/data/projects";
 import React from "react";
 import { ProjectsCard } from "../ProjectsCards/ProjectsCards";
+import ProjectStructuredData from "../SEO/ProjectStructuredData";
 
 export const Projects = () => {
   return (
     <div id="projects" className="pt-0.5 mt-32">
+      <ProjectStructuredData projects={projects} />
       <h1 className="text-4xl font-bold tracking-tighter text-center sm:text-5xl md:text-6xl lg:text-7xl/none">
         <span className="green-text-gradient">Projects</span>
       </h1>

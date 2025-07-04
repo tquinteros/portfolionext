@@ -8,7 +8,8 @@ import { navLinks } from "@/data/navLinks";
 import { ImProfile } from "react-icons/im";
 import CvDialog from "../CvModal/CvDialog";
 import { useModal } from "@/src/contexts/ModalContext";
-import { Github, Linkedin, FileUser } from "lucide-react";
+import { Github, Linkedin, FileUser, FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -64,15 +65,15 @@ export const Header = () => {
 
   return (
     <header
-      className={`duration-300 fixed w-full top-0 z-[50] ${isTop ? "bg-transparent" : "bg-[#050816]"
+      className={`fixed w-full top-0 z-[50] border-b border-custom-teal/20 backdrop-blur-sm transition-all duration-300 ${isTop ? "bg-transparent" : "bg-[#050816]/90 backdrop-blur-md "
         }`}
     >
       <CvDialog />
-      <nav className="flex px-4 lg:px-0 py-2 container items-center mx-auto justify-between">
+      <nav className="flex px-4 lg:px-0 py-0.5 container items-center mx-auto justify-between">
         <motion.div
-          // initial={{ opacity: 0, y: -100 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 1.2, delay: 0.3 }}
+        // initial={{ opacity: 0, y: -100 }}
+        // animate={{ opacity: 1, y: 0 }}
+        // transition={{ duration: 1.2, delay: 0.3 }}
         >
           <Link
             href="#hero"
@@ -85,10 +86,10 @@ export const Header = () => {
               height={75}
               alt="Logo"
             />
-            <p className="text-white text-[18px] font-bold hidden sm:block">
-              Tomás Quinteros{" "}
-              <span className="md:block hidden">Frontend Developer</span>
-            </p>
+            <div className="flex flex-col">
+              <span className="text-lg font-bold text-white">Tomás Quinteros</span>
+              <span className="text-sm text-gray-400">Frontend Developer</span>
+            </div>
           </Link>
         </motion.div>
         <motion.ul
@@ -100,7 +101,7 @@ export const Header = () => {
           {navLinks.map((link) => (
             <li
               key={link.name}
-              className="cursor-pointer p-1 hover:opacity-75 duration-300"
+              className="text-sm font-medium text-gray-300 hover:text-custom-green transition-colors cursor-pointer"
             >
               <Link href={link.href}>{link.name}</Link>
             </li>
@@ -110,7 +111,8 @@ export const Header = () => {
               onClick={openModal}
               className="flex items-center gap-2 font-bold duration-300 rounded-2xl py-1 text-gray-400 hover:text-custom-green transition-colors"
             >
-              <FileUser size={32} />
+              <FileUser
+                className="h-7 w-7" />
             </button>
             <a
               href="https://github.com/tquinteros"
@@ -119,8 +121,7 @@ export const Header = () => {
               className="text-gray-400 hover:text-custom-green transition-colors"
             >
               <Github
-                size={32}
-
+                className="h-7 w-7"
               />
             </a>
             <a
@@ -130,8 +131,7 @@ export const Header = () => {
               className="text-gray-400 hover:text-custom-green transition-colors"
             >
               <Linkedin
-                size={32}
-
+                className="h-7 w-7"
               />
             </a>
           </div>
