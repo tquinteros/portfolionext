@@ -31,7 +31,7 @@ const CvDialog: React.FC = () => {
 
     return (
         <Dialog open={isModalOpen} onOpenChange={closeModal}>
-            <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto bg-[#050816] border-custom-teal/50 text-white">
+            <DialogContent className="max-w-6xl h-[85vh] overflow-y-auto bg-[#050816] border-custom-teal/50 text-white">
                 <DialogHeader>
                     <DialogTitle className="text-2xl mt-6 font-bold text-custom-green flex items-center justify-between">
                         Curriculum Vitae
