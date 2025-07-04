@@ -89,13 +89,13 @@ const Hero = () => {
                 </Button>
               </div>
               <div className="flex justify-center gap-4">
+                <FileUser className="h-8 w-8 text-gray-400 hover:text-custom-green transition-colors cursor-pointer" onClick={openModal} />
                 <a href="https://github.com/tquinteros" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-custom-green transition-colors">
                   <Github className="h-8 w-8" />
                 </a>
                 <a href="https://www.linkedin.com/in/tomas-quinteros1/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-custom-green transition-colors">
                   <Linkedin className="h-8 w-8" />
                 </a>
-                <FileUser className="h-8 w-8 text-gray-400 hover:text-custom-green transition-colors cursor-pointer" onClick={openModal} />
               </div>
             </motion.div>
           </div>
