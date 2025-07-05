@@ -131,7 +131,6 @@ const Contact = () => {
                         <p className="text-lg text-gray-300 max-w-lg">
                             Feel free to send an email, your query does not bother.
                         </p>
-
                         <form onSubmit={handleSubmit} className="space-y-6 mt-8">
                             <div className="space-y-2">
                                 <Label htmlFor="name" className="text-white text-base font-medium">

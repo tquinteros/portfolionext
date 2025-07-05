@@ -16,19 +16,17 @@ interface Project {
 const KeyProjects: React.FC = () => {
   const projects: Project[] = [
     {
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with real-time inventory and payment processing",
-      technologies: ["Next.js", "TypeScript", "Stripe"],
-      liveUrl: "#",
-      codeUrl: "#",
+      title: "BLKMarket",
+      description: "A social-driven e-commerce platform with user  profiles",
+      technologies: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "Shadcn UI", "Zustand", "Zod Server Actions", "Framer Motion", "Material UI"],
+      liveUrl: "https://blkmarket.ar/",
       borderColor: "border-custom-teal/30"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates and team features",
-      technologies: ["React", "Node.js", "Socket.io"],
-      liveUrl: "#",
-      codeUrl: "#",
+      title: "Decentraland Artweek Landing Page",
+      description: "A landing page for Decentraland Artweek",
+      technologies: ["React","Material UI"],
+      liveUrl: "https://artweek-delta.vercel.app/",
       borderColor: "border-custom-green/30"
     }
   ];
@@ -41,28 +39,28 @@ const KeyProjects: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projects.map((project, index) => (
           <Card key={index} className={`bg-slate-800/50 ${project.borderColor}`}>
-            <CardContent className="p-4">
+            <CardContent className="p-4 flex flex-col h-full min-h-44">
               <h3 className="font-bold text-white mb-2">{project.title}</h3>
               <p className="text-gray-300 text-sm mb-3">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-1 mb-2">
                 {project.technologies.map((tech, techIndex) => (
-                  <Badge 
+                  <Badge
                     key={techIndex}
-                    variant="outline" 
-                    className="text-xs border-custom-teal text-custom-green"
+                    variant="outline"
+                    className="bg-custom-teal/20 text-custom-green border-custom-teal/50"
                   >
                     {tech}
                   </Badge>
                 ))}
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 mt-auto">
                 {project.liveUrl && (
                   <Button
                     size="sm"
                     variant="outline"
-                    className="text-xs border-custom-teal/50 text-custom-green bg-transparent"
+                    className="text-xs border-custom-teal/50 text-custom-green bg-transparent hover:bg-transparent hover:text-custom-green hover:opacity-75 duration-300 transition-all"
                     onClick={() => window.open(project.liveUrl, '_blank')}
                   >
                     <ExternalLink className="mr-1 h-3 w-3" />
@@ -73,7 +71,7 @@ const KeyProjects: React.FC = () => {
                   <Button
                     size="sm"
                     variant="outline"
-                    className="text-xs border-custom-green text-custom-teal bg-transparent"
+                    className="text-xs border-custom-green text-custom-teal bg-transparent hover:bg-transparent hover:text-custom-teal hover:opacity-75 duration-300 transition-all"
                     onClick={() => window.open(project.codeUrl, '_blank')}
                   >
                     <Github className="mr-1 h-3 w-3" />

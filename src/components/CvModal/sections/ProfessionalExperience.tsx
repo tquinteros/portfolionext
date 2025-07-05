@@ -17,10 +17,10 @@ const ProfessionalExperience: React.FC = () => {
       period: "Feb 2023 - Present",
       location: "Remote",
       responsibilities: [
-        "Developed and maintained scalable web applications using React, Next.js, and TypeScript",
-        "Collaborated with cross-functional teams to implement new features and improve user experience",
-        "Optimized application performance and implemented best practices for accessibility and SEO",
-        "Worked on a variety of projects, including e-commerce platforms, admin dashboards, and user management tools"
+        "Built a social-driven e-commerce platform with user profiles",
+        "Implemented product creation and editing features",
+        "Developed an admin panel with charts and data tables",
+        "Integrated payment gateway for product purchases"
       ]
     },
     {
