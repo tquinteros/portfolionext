@@ -18,7 +18,7 @@ const KeyProjects: React.FC = () => {
     {
       title: "BLKMarket",
       description: "A social-driven e-commerce platform with user  profiles",
-      technologies: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "Shadcn UI", "Zustand", "Zod Server Actions", "Framer Motion", "Material UI"],
+      technologies: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "Shadcn UI", "Zustand", "Zod Server Actions"],
       liveUrl: "https://blkmarket.ar/",
       borderColor: "border-custom-teal/30"
     },

@@ -45,7 +45,7 @@ const ProfessionalExperience: React.FC = () => {
       <div className="space-y-6">
         {experiences.map((experience, index) => (
           <div key={index} className="border-l-2 border-gray-600 pl-4">
-            <div className="flex justify-between items-start mb-2">
+            <div className="flex justify-between items-center  mb-2">
               <div>
                 <h3 className="font-bold text-white">{experience.title}</h3>
                 <p className="text-custom-teal">{experience.company}</p>
