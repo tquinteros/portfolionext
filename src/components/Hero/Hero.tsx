@@ -67,7 +67,7 @@ const Hero = () => {
               </h1>
               <p className="mx-auto mt-0 max-w-[700px] text-gray-300 text-center md:text-xl">
                 I craft responsive and performant web applications using TypeScript,
-                React, and modern libraries like Next.js and React Query—along with a broader set of
+                React, and modern libraries like Next.js and TanStack Query—along with a broader set of
                 tools adapted to each project’s needs.
               </p>
               <div className="flex mb-2 flex-col md:flex-row md:justify-center gap-2">

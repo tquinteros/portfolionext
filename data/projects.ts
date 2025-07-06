@@ -3,7 +3,7 @@ export const projects = [
         title: "BLKMarket",
         description: "",
         image: "/blkweb.png",
-        techs: ["Next.js", "Typescript", "ZSA", "React Query", "MongoDB", "Tailwind CSS"],
+        techs: ["Next.js", "Typescript", "ZSA", "TanStack Query", "MongoDB", "Tailwind CSS"],
         github: "",
         deploy: "https://blkmarket.ar/",
     },
