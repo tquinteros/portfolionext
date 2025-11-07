@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://tquinteros.vercel.app/sitemap.xml',
+    sitemap: 'https://www.tquinteros.site/sitemap.xml',
   }
 } 

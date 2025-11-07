@@ -1,16 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { ExternalLink, Github, Info } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import { ProjectDetailsDialog } from "@/src/components/ProjectDetails/ProjectDetailsDialog";
+import { projectDetailsMap } from "@/data/projectDetails";
 
 type ProjectsCardProps = {
   title: string;
@@ -33,6 +30,9 @@ export const ProjectsCard = ({
   hasInfo = false,
   infoText,
 }: ProjectsCardProps) => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const projectDetails = projectDetailsMap[title];
+
   return (
     <motion.div
       className="group relative overflow-hidden rounded-lg bg-slate-900/30 border border-slate-700/50 hover:border-custom-green/50 transition-all duration-300"
@@ -72,17 +72,25 @@ export const ProjectsCard = ({
                 <ExternalLink className="h-4 w-4" />
               </Link>
             )}
-            {hasInfo && (
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger>
-                    <Info className="h-4 w-4 text-gray-400 hover:text-custom-green transition-colors" />
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>{infoText}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
+            {hasInfo && projectDetails && (
+              <>
+                <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+                  <DialogTrigger asChild>
+                    <button className="text-gray-400 hover:text-custom-green transition-colors cursor-pointer">
+                      <Info className="h-4 w-4" />
+                    </button>
+                  </DialogTrigger>
+                  <ProjectDetailsDialog
+                    title={title}
+                    details={projectDetails}
+                  />
+                </Dialog>
+              </>
+            )}
+            {hasInfo && !projectDetails && infoText && (
+              <div className="text-gray-400" title={infoText}>
+                <Info className="h-4 w-4" />
+              </div>
             )}
           </div>
         </div>
