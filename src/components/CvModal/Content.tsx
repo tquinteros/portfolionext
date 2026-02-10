@@ -16,7 +16,7 @@ const ContentModal = () => {
                 </div>
                 <div>
                     <h3 className="text-2xl font-bold text-center">Tomás Quinteros</h3>
-                    <h3 className="text-2xl font-bold text-center">Frontend Developer</h3>
+                    <h3 className="text-2xl font-bold text-center">FullStack Developer</h3>
                 </div>
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-col items-center gap-1">

@@ -88,7 +88,7 @@ export const Header = () => {
             />
             <div className="flex flex-col">
               <span className="text-lg font-bold text-white">Tomás Quinteros</span>
-              <span className="text-sm text-gray-400">Frontend Developer</span>
+              <span className="text-sm text-gray-400">FullStack Developer</span>
             </div>
           </Link>
         </motion.div>

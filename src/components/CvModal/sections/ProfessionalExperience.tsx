@@ -24,7 +24,7 @@ const ProfessionalExperience: React.FC = () => {
       ]
     },
     {
-      title: "Frontend Developer",
+      title: "FullStack Developer",
       company: "Zetaequis",
       period: "Feb 2022 - Present",
       location: "Remote (Part time)",

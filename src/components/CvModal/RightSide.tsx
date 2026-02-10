@@ -75,7 +75,7 @@ const RightSide = () => {
               <h5
                 className="text-xl w-fit font-bold"
               >
-                Frontend Developer
+                FullStack Developer
               </h5>
               <a href="https://www.zetaequis.com" target="_blank" className="text-md font-bold hover:opacity-75 duration-300">
                 Zetaequis &nbsp; | &nbsp; Part time
