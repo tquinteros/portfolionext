@@ -10,15 +10,20 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Tomás Quinteros - Frontend Developer Portfolio",
+    default: "Tomás Quinteros - FullStack Developer Portfolio",
     template: "%s | Tomás Quinteros"
   },
-  description: "Frontend developer specializing in React, TypeScript, and Next.js. Creating modern, responsive web applications with cutting-edge technologies.",
+  description: "FullStack developer specializing in React, TypeScript, Next.js, Node.js, and MongoDB. Creating modern, responsive web applications with cutting-edge technologies. Expert in both frontend and backend development.",
   keywords: [
+    "fullstack developer",
+    "full stack developer",
     "frontend developer",
+    "backend developer",
     "react developer",
     "typescript developer",
     "next.js developer",
+    "node.js developer",
+    "mongodb developer",
     "web developer",
     "javascript developer",
     "portfolio",
@@ -41,14 +46,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://tquinteros.vercel.app',
-    title: 'Tomás Quinteros - Frontend Developer Portfolio',
-    description: 'Frontend developer specializing in React, TypeScript, and Next.js. Creating modern, responsive web applications with cutting-edge technologies.',
+    title: 'Tomás Quinteros - FullStack Developer Portfolio',
+    description: 'FullStack developer specializing in React, TypeScript, Next.js, Node.js, and MongoDB. Creating modern, responsive web applications with cutting-edge technologies. Expert in both frontend and backend development.',
     siteName: 'Tomás Quinteros Portfolio',
   },
   twitter: {
-    card: 'summary',
-    title: 'Tomás Quinteros - Frontend Developer Portfolio',
-    description: 'Frontend developer specializing in React, TypeScript, and Next.js. Creating modern, responsive web applications with cutting-edge technologies.',
+    card: 'summary_large_image',
+    title: 'Tomás Quinteros - FullStack Developer Portfolio',
+    description: 'FullStack developer specializing in React, TypeScript, Next.js, Node.js, and MongoDB. Creating modern, responsive web applications with cutting-edge technologies.',
     creator: '@tquinteros',
   },
   robots: {
@@ -76,8 +81,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Tomás Quinteros",
-    "jobTitle": "Frontend Developer",
-    "description": "Frontend developer specializing in React, TypeScript, and Next.js",
+    "jobTitle": "FullStack Developer",
+    "description": "FullStack developer specializing in React, TypeScript, Next.js, Node.js, and MongoDB. Expert in both frontend and backend development.",
     "url": "https://tquinteros.vercel.app",
     "sameAs": [
       "https://github.com/tquinteros",
@@ -87,8 +92,12 @@ export default function RootLayout({
       "React",
       "TypeScript",
       "Next.js",
+      "Node.js",
+      "MongoDB",
       "JavaScript",
+      "FullStack Development",
       "Frontend Development",
+      "Backend Development",
       "Web Development"
     ],
     "address": {

@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Tomás Quinteros - Frontend Developer Portfolio',
+    name: 'Tomás Quinteros - FullStack Developer Portfolio',
     short_name: 'TQ Portfolio',
-    description: 'Frontend developer specializing in React, TypeScript, and Next.js',
+    description: 'FullStack developer specializing in React, TypeScript, Next.js, Node.js, and MongoDB',
     start_url: '/',
     display: 'standalone',
     background_color: '#050816',
