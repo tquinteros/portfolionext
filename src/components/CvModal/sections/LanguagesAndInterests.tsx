@@ -29,7 +29,7 @@ const LanguagesAndInterests: React.FC = () => {
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <h2 className="text-xl font-bold text-custom-green mb-3 border-l-4 border-custom-green pl-3">
           Interests
         </h2>
@@ -44,7 +44,7 @@ const LanguagesAndInterests: React.FC = () => {
             </Badge>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

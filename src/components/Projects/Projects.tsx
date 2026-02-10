@@ -14,7 +14,7 @@ export const Projects = () => {
         These are a few of the projects I&apos;ve created. If you&apos;d like to see more, feel free to get in touch
         with me.
       </p>
-      <div className="p-4 xl:p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto col-span-12">
+      <div className="p-4 xl:p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto col-span-12">
         {projects.map((project) => (
           <ProjectsCard
             key={project.title}
