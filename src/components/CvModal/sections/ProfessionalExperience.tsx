@@ -12,29 +12,17 @@ interface Experience {
 const ProfessionalExperience: React.FC = () => {
   const experiences: Experience[] = [
     {
-      title: "Full Stack Developer",
-      company: "BLKMarket",
-      period: "Feb 2023 - Present",
+      title: "Full-stack Developer",
+      company: "Zetaequis",
+      period: "December 2022 – Present",
       location: "Remote",
       responsibilities: [
-        "Built a social-driven e-commerce platform with user profiles",
-        "Implemented product creation and editing features",
-        "Developed an admin panel with charts and data tables",
-        "Integrated payment gateway for product purchases"
+        "Contributed to multiple client-facing web projects, including a large-scale full-stack e-commerce and social platform (BLKMarket) serving 5,000+ registered users, working within a 5–10 person development team",
+        "Built and maintained features across several web applications, including product and content management, order flows with refunds/returns, real-time social feeds, user profiles, and admin dashboards",
+        "Developed a cross-platform mobile application using React Native, published on the App Store and Google Play",
+        "Stack: Next.js, TypeScript, TanStack Query, MongoDB, Shadcn/ui, Leaflet, Pusher, NextAuth, Zod"
       ]
     },
-    {
-      title: "FullStack Developer",
-      company: "Zetaequis",
-      period: "Feb 2022 - Present",
-      location: "Remote (Part time)",
-      responsibilities: [
-        "Developed and maintained scalable web applications using React, Next.js, and TypeScript",
-        "Collaborated with cross-functional teams to implement new features and improve user experience",
-        "Optimized application performance and implemented best practices for accessibility and SEO",
-        "Worked on a variety of projects, including e-commerce platforms, admin dashboards, and user management tools"
-      ]
-    }
   ];
 
   return (

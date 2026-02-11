@@ -128,7 +128,7 @@ const Contact = () => {
                     <div className="text-left space-y-6">
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold green-text-gradient">Contact Me!</h2>
                         <p className="text-lg text-gray-300 max-w-lg">
-                            Feel free to send an email, your query does not bother.
+                            Open to new opportunities and collaborations. Feel free to reach out.
                         </p>
                         <form onSubmit={handleSubmit} className="space-y-6 mt-8">
                             <div className="space-y-2">

@@ -66,9 +66,13 @@ const Hero = () => {
                 <span className="green-text-gradient">Web Interfaces</span>
               </h1>
               <p className="mx-auto mt-0 max-w-[700px] text-gray-300 text-center md:text-xl">
-                I craft responsive and performant web applications using TypeScript,
+                {/* I craft responsive and performant web applications using TypeScript,
                 React, and modern libraries like Next.js and TanStack Query—along with a broader set of
-                tools adapted to each project’s needs.
+                tools adapted to each project’s needs. */}
+                Full-stack Developer with 4+ years of experience building production-ready web
+                applications using the React and Next.js ecosystem. Hands-on experience developing
+                e-commerce and SaaS platforms used by thousands of users, collaborating in
+                cross-functional teams across the full development lifecycle.
               </p>
               <div className="flex mb-2 flex-col md:flex-row md:justify-center gap-2">
                 <Button asChild className="green-gradient-bg h-10 green-gradient-hover text-white border-0">
