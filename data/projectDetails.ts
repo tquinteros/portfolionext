@@ -75,14 +75,14 @@ export const projectDetailsMap: Record<string, ProjectDetails> = {
           "Ability to monitor platform usage and status",
         ],
       },
-      {
-        title: "💰 Monetization (In Development)",
-        items: [
-          "Planned integration with MercadoPago Connect (Split Payments)",
-          "Automatic payment distribution: Fixed $1,000 fee → platform commission. Owner gets the rest",
-          "Support for 'deposit' and 'full payment' options",
-        ],
-      },
+      // {
+      //   title: "💰 Monetization (In Development)",
+      //   items: [
+      //     "Planned integration with MercadoPago Connect (Split Payments)",
+      //     "Automatic payment distribution: Fixed $1,000 fee → platform commission. Owner gets the rest",
+      //     "Support for 'deposit' and 'full payment' options",
+      //   ],
+      // },
     ],
     nextSteps: [
       "Export tools (CSV, PDF reports)",
@@ -122,7 +122,7 @@ export const projectDetailsMap: Record<string, ProjectDetails> = {
         ],
       },
       {
-        title: "🛍️ Products & Catalog",
+        title: "Products & Catalog",
         items: [
           "Products page with infinite scroll for optimal performance",
           "Admin can create, edit, and delete products with full CRUD operations",
@@ -143,7 +143,7 @@ export const projectDetailsMap: Record<string, ProjectDetails> = {
         ],
       },
       {
-        title: "🎫 Coupon System",
+        title: "Coupon System",
         items: [
           "Admin can create custom coupons with flexible configuration",
           "Support for percentage-based discounts (e.g., 20% off)",

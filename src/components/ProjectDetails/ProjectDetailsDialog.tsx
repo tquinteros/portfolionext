@@ -148,7 +148,7 @@ export const ProjectDetailsDialog = ({
           )}
 
           {/* Next Steps Section */}
-          {details.nextSteps && details.nextSteps.length > 0 && (
+          {/* {details.nextSteps && details.nextSteps.length > 0 && (
             <div className="space-y-3">
               <h3 className="text-xl font-semibold text-custom-green flex items-center gap-2">
                 <span className="text-2xl">📈</span> Next Steps (Post-MVP)
@@ -167,7 +167,7 @@ export const ProjectDetailsDialog = ({
                 </ul>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </DialogContent>
   );
